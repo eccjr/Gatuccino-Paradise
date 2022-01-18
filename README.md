@@ -1,1 +1,1 @@
-# CatCafe
+# Gatuccino Paradise
