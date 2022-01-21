@@ -1,8 +1,61 @@
-
+@font-face {
+    font-family: miau;
+    /* src: url(Meows-VGWjy.ttf); */
+}
 *{
     cursor: url(../src/cat_cursor.cur), auto;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: miau;
 }
-
 body{
     background-color: #d6ad60;
+}
+/* MAIS CLARO 51F3D6 */
+/* d6ad60 */
+/* D41EAC */
+/* D89BE2 */
+/* C7C7C7 */
+/* 979797 */
+/* EBEDFC */
+
+#content{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+nav ul{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+nav a{
+    color: #d6ad60 !important;
+
+}
+#banner{
+    /* background-image:  */
+    display: flex;
+    flex-direction: column;
+}
+#frase-efeito{
+    color: #f4ebd0 !important;
+    background-color: rgba(0, 0, 0, 0.247);
+    display: block;
+    width: fit-content;
+    padding: 0 15px;
+    align-self: center;
+    margin-top: 10rem;
 }
