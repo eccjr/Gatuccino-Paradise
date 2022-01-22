@@ -116,3 +116,25 @@ nav a {
 
 /* Animation */
 .fixed-button:hover { transform: translateY(-0.8rem); }
+
+/*Galery*/
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image_type1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 18vw;
+    height: 25vh;
+    background-size: cover;
+}
+
+.image{
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+}
