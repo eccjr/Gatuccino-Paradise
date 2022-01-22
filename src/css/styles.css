@@ -82,36 +82,35 @@ nav a {
     border-radius: 50%;
     padding: .5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: auto;
     transition: transform .35s ease-in-out;
 }
 
-.fixed-button .button-format {
+.fixed-button .button-container {
+    display: block;
     position: relative;
-    width: 4rem;
-    height: 4rem;
-    background: url("../images/cat_icon.png");
-    background-repeat: no-repeat;
-    background-position: -8px;
-    background-size: cover;
+    width: 64px;
+    height: 64px;
 }
 
-.fixed-button  .button-format .brand-icon {
+.fixed-button .button-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
+    right: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    display: block;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: .325rem 0 auto auto;
 }
 
-.brand-icon img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.fixed-button .button-container .cat-icon {
+    margin: auto auto auto -6px;
+}
+
+.fixed-button .button-container .wpp-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 8px 0 auto auto;
 }
 
 /* Animation */
