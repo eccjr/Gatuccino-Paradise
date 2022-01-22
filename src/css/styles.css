@@ -16,7 +16,7 @@
 }
 
 /* Sobrescrevendo Cursor Padrão */
-*, [role="button"] { cursor: url("../utils/cat_cursor.cur"), auto; }
+*, [role="button"] { cursor: url("../utils/cursor.cur"), auto; }
 * {
     padding: 0;
     margin: 0;
