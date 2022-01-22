@@ -1,0 +1,118 @@
+/* Meows Font Import */
+@font-face {
+    font-family: "Meows";
+    src: url("../utils/Meows-VGWjy.ttf");
+}
+
+:root {
+    --marrom-cafe: #7D3F20;
+    --marrom-escuro: #481D01;
+    --bege-claro: #F4EBD0;
+    --bege-escuro: #D6AD60;
+    --cinza-claro: #EBEDFC;
+    --cinza-medio: #C7C7C7;
+    --cinza-escuro: #979797;
+    font-size: 16px;
+}
+
+/* Sobrescrevendo Cursor Padrão */
+*, [role="button"] { cursor: url("../utils/cat_cursor.cur"), auto; }
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Meows";
+}
+
+body{
+    background-color: var(--bege-escuro);
+    overflow-x: hidden;
+}
+
+#content {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+nav ul {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+nav a {
+    color: var(--bege-escuro);
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+}
+
+#frase-efeito {
+    color: var(--bege-claro);
+    background-color: rgba(0, 0, 0, 0.247);
+    display: block;
+    width: fit-content;
+    padding: 0 15px;
+    align-self: center;
+    margin: 10rem 0;
+}
+
+/* ========================= Fixed WhatsApp Button */
+.fixed-button {
+    position: fixed;
+    right: 2vw;
+    bottom: 4vh;
+    background: white;
+    border-radius: 50%;
+    padding: .5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: auto;
+    transition: transform .35s ease-in-out;
+}
+
+.fixed-button .button-format {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    background: url("../images/cat_icon.png");
+    background-repeat: no-repeat;
+    background-position: -8px;
+    background-size: cover;
+}
+
+.fixed-button  .button-format .brand-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: .325rem 0 auto auto;
+}
+
+.brand-icon img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Animation */
+.fixed-button:hover { transform: translateY(-0.8rem); }
