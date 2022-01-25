@@ -52,7 +52,6 @@ body {
 #content {
     width: 100%;
     min-height: 100vh;
-    padding: 0 2rem;
 }
 
 /* ========================= Navbar */
@@ -170,11 +169,15 @@ nav {
 .nav-tel .tel-icon { margin-right: 5px; }
 
 /* ========================= Primeira Seção: Sobre o Café */
+.section-frame {
+    width: 100%;
+    padding-top: 120px;
+    background: var(--bege-claro);
+}
+
 .section-container {
     max-width: var(--width-container-desktop);
-    width: 100%;
-    background: var(--bege-claro);
-    padding-top: 120px;
+    background: inherit;
     margin: 0 auto;
     text-shadow: var(--basic-text-shadow);
 }
@@ -273,6 +276,13 @@ nav {
 .border-wrapper {
     background: linear-gradient(145deg, var(--std-border));
     padding: 6px;
+}
+
+/* ========================= Segunda Seção: Sobre o Estabelecimento */
+#second-section {
+    background: var(--marrom-escuro);
+    padding-top: 160px;
+    margin-top: -100px;
 }
 
 /* ========================= Botão Fixo do WhatsApp */
