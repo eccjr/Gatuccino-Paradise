@@ -4,7 +4,7 @@
     src: url("../utils/Meows-VGWjy.ttf");
 }
 
-:root {
+:root { /* Variáveis de Cores utilizadas */
     --marrom-cafe: #7D3F20;
     --marrom-escuro: #481D01;
     --bege-claro: #F4EBD0;
@@ -17,7 +17,7 @@
 
 /* Sobrescrevendo Cursor Padrão */
 *, [role="button"] { cursor: url("../utils/cursor.cur"), auto; }
-* {
+* { /* Atualizando valores globais */
     padding: 0;
     margin: 0;
     border: 0;
@@ -25,55 +25,22 @@
     font-family: "Meows";
 }
 
-body{
-    background-color: var(--bege-escuro);
+/* ========================= Elementos de Controle da Página */
+body {
+    background-color: var(--bege-claro);
     overflow-x: hidden;
 }
 
 #content {
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    justify-content: center;
     width: 100%;
+    min-height: 100vh;
+    padding: 0 2rem;
 }
 
-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.247);
-}
+/* ========================= Navbar */
 
-nav ul {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-    justify-content: space-evenly;
-}
 
-nav a {
-    color: var(--bege-escuro);
-}
-
-#banner {
-    display: flex;
-    flex-direction: column;
-}
-
-#frase-efeito {
-    color: var(--bege-claro);
-    background-color: rgba(0, 0, 0, 0.247);
-    display: block;
-    width: fit-content;
-    padding: 0 15px;
-    align-self: center;
-    margin: 10rem 0;
-}
-
-/* ========================= Fixed WhatsApp Button */
+/* ========================= Botão Fixo do WhatsApp */
 .fixed-button {
     position: fixed;
     right: 2vw;
