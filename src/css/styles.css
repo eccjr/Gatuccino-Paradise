@@ -83,25 +83,3 @@ body {
     background: rgba(0, 0, 0, .1);
     transform: translateY(-0.8rem);
 }
-
-/*Galery*/
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.image_type1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 18vw;
-    height: 25vh;
-    background-size: cover;
-}
-
-.image {
-    flex-shrink: 0;
-    width: 100%;
-    height: auto;
-}
