@@ -4,7 +4,8 @@
     src: url("../utils/Meows-VGWjy.ttf");
 }
 
-:root { /* Variáveis de Cores utilizadas */
+:root {
+    /* Variáveis de Cores utilizadas */
     --marrom-cafe: #7D3F20;
     --marrom-escuro: #481D01;
     --bege-claro: #F4EBD0;
@@ -12,6 +13,11 @@
     --cinza-claro: #EBEDFC;
     --cinza-medio: #C7C7C7;
     --cinza-escuro: #979797;
+    --basic-text-shadow: 0 4px 8px rgba(0, 0, 0, .16);
+
+    /* Tamanhos Variáveis */
+    --height-nav-desktop: 100px;
+
     font-size: 16px;
 }
 
@@ -22,8 +28,10 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: "Meows";
+    font-family: "Rokkitt", Arial, sans-serif;
 }
+
+.meows-font { font-family: "Meows"; }
 
 /* ========================= Elementos de Controle da Página */
 body {
@@ -38,7 +46,119 @@ body {
 }
 
 /* ========================= Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--bege-claro);
+}
 
+.navbar-container {
+    max-width: 1110px;
+    height: var(--height-nav-desktop);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 auto;
+    background: inherit;
+}
+
+.navbar-container a {
+    color: var(--marrom-escuro);
+    text-decoration: none;
+}
+
+/* Navbar-Columns */
+.nav-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: inherit;
+    text-shadow: var(--basic-text-shadow);
+}
+
+/* --------> Logo-Brand */
+.navbar-brand {
+    width: 215px;
+    height: 80px;
+    font-size: 26px;
+    font-weight: bold;
+    transition: transform .2s ease-in-out;
+}
+
+.navbar-brand img {
+    width: 80px;
+    height: 80px;
+    object-fit: fill;
+    margin-right: 15px;
+}
+
+.navbar-brand .brand-name {
+    text-align: left;
+    margin-top: 11px;
+    color: var(--cinza-claro);
+    
+    /* Provisório */
+    text-shadow:
+        2px 0 0 var(--marrom-cafe),
+        -2px 0 0 var(--marrom-cafe),
+        0 2px 0 var(--marrom-cafe),
+        0 -2px 0 var(--marrom-cafe),
+        1px 1px var(--marrom-cafe),
+        -1px -1px 0 var(--marrom-cafe),
+        1px -1px 0 var(--marrom-cafe),
+        -1px 1px 0 var(--marrom-cafe);
+}
+
+/* Logo Animation */
+.navbar-brand:hover { transform: translateY(-4px); }
+
+/* --------> Seção de Links de Navegação */
+.navbar-collapse { max-width: 460px; }
+
+/* Nav-Links */
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-item {
+    width: 100px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: var(--basic-text-shadow);
+}
+
+.nav-item .nav-link { padding: 0.6rem 1.5rem; }
+
+/* -> Animações nos Elementos da Navbar */
+.nav-item .nav-link,
+.nav-tel { transition: all .2s ease-in-out; }
+
+/* Hovering Animations */
+.nav-item .nav-link:hover,
+.nav-tel:hover {
+    color: var(--marrom-cafe);
+    transform: translateY(-4px);
+}
+
+/* --------> Seção do Telefone */
+.nav-tel {
+    max-width: 225px;
+    padding: 0.6rem 1.5rem;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: var(--basic-text-shadow);
+}
+
+.nav-tel .tel-icon { margin-right: 5px; }
 
 /* ========================= Botão Fixo do WhatsApp */
 .fixed-button {
