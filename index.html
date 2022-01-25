@@ -5,77 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="src/images/logo.png" />
-
+    
     <!-- Bootstrap Import -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <!-- Google Material Icons -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    
+    <!-- Google Material Icons & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;500;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="src/css/styles.css">
-
+    <link rel="stylesheet" href="src/css/main.css">
+    
     <title>Gatuccino Paradise</title>
 </head>
 <body>
     <div id="content">
-        <header>
-            <div id="banner">
-                <nav>
-                    <ul class="nav">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <!-- Primeira Seção: Porção da Logo -->
+                <a href="#" class="nav-section navbar-brand">
+                    <img src="src/images/logo.png" alt="Logomarca da Cafeteria Gatuccino Paradise." />
+                    <span class="meows-font brand-name">Gatuccino Paradise</span>
+                </a>
+                
+                <!-- Segunda Seção: Links de Navegação -->
+                <div class="nav-section navbar-collapse">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
+                            <a href="#" class="nav-link active">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="src/pages/galeria.html">Galeria</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank" rel="noopener noreferrer">
-                                <img src="src/images/logo.png" alt="" />
-                            </a>
+                            <a href="#" class="nav-link">Adote</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="adocoes.html">Adoções</a>
+                            <a href="#" class="nav-link">Fotos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contato.html">Contato</a>
+                            <a href="#" class="nav-link">Visitas</a>
                         </li>
                     </ul>
-                </nav>
-                <div id="frase-efeito">
-                    <h1>Pspsps que gatinho vem sempre aqui?</h1>
                 </div>
+                
+                <!-- Terceira Seção: Telefone -->
+                <a href="tel:+551712349382" class="nav-section nav-tel">
+                    <div class="material-icons tel-icon">phone</div>
+                    <span class="tel-number">+55 (17) 1234-9382</span>
+                </a>
             </div>
-        </header>
-        <section id="slider" class="">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="src/images/cat-cafe-01.jpg" alt="First slide">
-                        <h2>never gonna give you up</h2>
+        </nav>
+        
+        <!-- Primeira Seção: Sobre o Café -->
+        <section id="first-section" class="section-frame">
+            <div class="section-container">
+                <!-- Nome do Café -->
+                <header>
+                    <h2 class="section-header">Gatuccino Paradise</h2>
+                </header>
+                
+                <div class="flex content-container">
+                    <!-- Coluna de Conteúdo (Texto) -->
+                    <div class="content-col">
+                        <header> <!-- Título do Blog -->
+                            <h1 class="section-caption">Um café relaxante para gatos!!</h1>
+                        </header>
+                        
+                        <div class="divider-horizontal"></div>
+                        
+                        <!-- Conteúdo de Texto da Seção -->
+                        <div class="section-about">
+                            <p>Conheça a cafeteria mais amada do Brasil! Aproveite seu dia em um lugar aconchegante junto a nossos gatinhos incríveis e bebidas de tirar o fôlego.</p>
+                        </div>
+                        
+                        <!-- Botões da Seção -->
+                        <div class="buttons">
+                            <a href="#" class="btn primary-btn" role="button">Faça hoje sua reserva</a>
+                            <a href="#" class="btn secondary-btn" role="button">Receba em casa</a>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="src/images/cat-cafe-02.jpg" alt="Second slide">
-                        <h2>never gonna let you down</h2>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="src/images/cat-cafe-03.jpg" alt="Third slide">
-                        <h2>never gonna run around and</h2>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="src/images/coffee.jpg" alt="">
-                        <h2>desert you</h2>
+                    
+                    <!-- Coluna da Imagem -->
+                    <div class="image-col border-wrapper">
+                        <img src="src/images/section-01.jpg" alt="Foto de uma de nossas mesas disponíveis." />
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  </a>
             </div>
         </section>
+        
+        <!-- Segunda Seção: Sobre o Estabelecimento -->
+        <section id="second-section" class="section-frame">
+            <div class="section-container">
 
+            </div>
+        </section>
+        
+        <!-- Botão Fixo do WhatsApp -->
         <div class="fixed-button">
             <a class="button-container" href="https://wa.me/+5516988105250" target="_blank">
                 <img src="/src/images/cat_icon.png" class="cat-icon" />

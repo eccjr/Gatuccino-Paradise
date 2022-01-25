@@ -1,0 +1,335 @@
+/* Meows Font Import */
+@font-face {
+    font-family: "Meows";
+    src: url("../utils/Meows-VGWjy.ttf");
+}
+
+:root {
+    /* Variáveis de Cores utilizadas */
+    --marrom-cafe: #7D3F20;
+    --marrom-escuro: #481D01;
+    --bege-claro: #F4EBD0;
+    --bege-escuro: #D6AD60;
+    --cinza-claro: #EBEDFC;
+    --cinza-medio: #C7C7C7;
+    --cinza-escuro: #979797;
+
+    /* Tamanhos Variáveis */
+    --width-container-desktop: 1110px;
+    --height-nav-desktop: 100px;
+
+    /* Utilidades */
+    --light-text-color: var(--cinza-claro);
+    --dark-text-color: var(--marrom-cafe);
+    --basic-text-shadow: 0 4px 8px rgba(0, 0, 0, .16);
+    --std-border:
+        var(--marrom-cafe) 0%,
+        rgba(255, 255, 255, .8) 25%,
+        rgba(255, 255, 255, .8) 75%,
+        var(--marrom-escuro) 100%;
+
+    font-size: 16px;
+}
+
+/* Sobrescrevendo Cursor Padrão */
+*, [role="button"] { cursor: url("../utils/cursor.cur"), auto; }
+* { /* Atualizando valores globais */
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Rokkitt", Arial, sans-serif;
+}
+
+.meows-font { font-family: "Meows"; }
+
+/* ========================= Elementos de Controle da Página */
+body {
+    background-color: var(--bege-claro);
+    overflow-x: hidden;
+}
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ========================= Navbar */
+nav {
+    width: 100%;
+    background: var(--bege-claro);
+}
+
+.navbar-container {
+    max-width: var(--width-container-desktop);
+    height: var(--height-nav-desktop);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 auto;
+    background: inherit;
+    margin: 0 auto;
+}
+
+.navbar-container a {
+    color: var(--marrom-escuro);
+    text-decoration: none;
+}
+
+/* Navbar-Columns */
+.nav-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: inherit;
+    text-shadow: var(--basic-text-shadow);
+}
+
+/* --------> Logo-Brand */
+.navbar-brand {
+    width: 215px;
+    height: 80px;
+    font-size: 26px;
+    font-weight: bold;
+    transition: transform .2s ease-in-out;
+}
+
+.navbar-brand img {
+    width: 80px;
+    height: 80px;
+    object-fit: fill;
+    margin-right: 15px;
+}
+
+.navbar-brand .brand-name {
+    text-align: left;
+    margin-top: 11px;
+    color: var(--cinza-claro);
+    
+    /* Provisório */
+    text-shadow:
+        2px 0 0 var(--marrom-cafe),
+        -2px 0 0 var(--marrom-cafe),
+        0 2px 0 var(--marrom-cafe),
+        0 -2px 0 var(--marrom-cafe),
+        1px 1px var(--marrom-cafe),
+        -1px -1px 0 var(--marrom-cafe),
+        1px -1px 0 var(--marrom-cafe),
+        -1px 1px 0 var(--marrom-cafe);
+}
+
+/* Logo Animation */
+.navbar-brand:hover { transform: translateY(-4px); }
+
+/* --------> Seção de Links de Navegação */
+.navbar-collapse { max-width: 460px; }
+
+/* Nav-Links */
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-item {
+    width: 100px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: var(--basic-text-shadow);
+}
+
+.nav-item .nav-link { padding: 0.6rem 1.5rem; }
+
+/* -> Animações nos Elementos da Navbar */
+.nav-item .nav-link,
+.nav-tel { transition: all .2s ease-in-out; }
+
+/* Hovering Animations */
+.nav-item .nav-link:hover,
+.nav-tel:hover {
+    color: var(--marrom-cafe);
+    transform: translateY(-4px);
+}
+
+/* --------> Seção do Telefone */
+.nav-tel {
+    max-width: 225px;
+    padding: 0.6rem 1.5rem;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: var(--basic-text-shadow);
+}
+
+.nav-tel .tel-icon { margin-right: 5px; }
+
+/* ========================= Primeira Seção: Sobre o Café */
+.section-frame {
+    width: 100%;
+    padding-top: 120px;
+    background: var(--bege-claro);
+}
+
+.section-container {
+    max-width: var(--width-container-desktop);
+    background: inherit;
+    margin: 0 auto;
+    text-shadow: var(--basic-text-shadow);
+}
+
+.section-header {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--bege-escuro);
+    margin-bottom: 15px;
+}
+
+/* Coluna de Texto - Conteúdo */
+.flex, .flex-reverse {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.flex-reverse { flex-direction: row-reverse; }
+
+#first-section .content-col {
+    width: 600px;
+    margin-right: 1rem;
+}
+
+.content-col .section-caption {
+    font-size: 72px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--dark-text-color);
+}
+
+.divider-horizontal {
+    width: 300px;
+    border-top: 2px solid var(--bege-escuro);
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.divider-vertical {
+    height: 300px;
+    border-left: 2px solid var(--bege-escuro);
+}
+
+.content-col .section-about {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--dark-text-color);
+    margin-bottom: 50px;
+}
+
+.btn {
+    display: inline-block;
+    width: 250px;
+    height: 70px;
+    padding: 22px 15px;
+    font-size: 24px;
+    border-radius: 4px;
+    text-align: center;
+    transition: all .2s ease-in;
+}
+
+/* Hover-Animation */
+.btn:hover {
+    opacity: .8;
+    transform: translateY(-6px);
+}
+
+.buttons .primary-btn {
+    background: var(--marrom-cafe);
+    color: var(--cinza-claro);
+    text-decoration: none;
+    margin-right: 60px;
+}
+
+.buttons .secondary-btn {
+    background: inherit;
+    color: var(--marrom-cafe);
+}
+
+/* Coluna de Imagem */
+#first-section .image-col {
+    max-width: 420px;
+    height: 650px;
+    box-shadow: 4px 2px 6px rgba(0, 0, 0, .16);
+    transition: transform .4s ease-out;
+}
+
+.image-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover-Animation */
+.image-col:hover { transform: translateY(-2rem); }
+
+/* Border-Hack */
+.border-wrapper {
+    background: linear-gradient(145deg, var(--std-border));
+    padding: 6px;
+}
+
+/* ========================= Segunda Seção: Sobre o Estabelecimento */
+#second-section {
+    background: var(--marrom-escuro);
+    padding-top: 160px;
+    margin-top: -100px;
+}
+
+/* ========================= Botão Fixo do WhatsApp */
+.fixed-button {
+    position: fixed;
+    right: 2vw;
+    bottom: 4vh;
+    background: white;
+    border-radius: 50%;
+    padding: .5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all .35s ease-in-out;
+}
+
+.fixed-button .button-container {
+    display: block;
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    text-decoration: none;
+}
+
+.fixed-button .button-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    right: 0;
+}
+
+.fixed-button .button-container .cat-icon { margin: auto auto auto -6px; }
+.fixed-button .button-container .wpp-icon {
+    font-size: 1.25rem;
+    color: #0DC143;
+    margin: 8px auto auto 44px;
+}
+
+/* Animation */
+.fixed-button:hover {
+    background: rgba(0, 0, 0, .1);
+    transform: translateY(-0.8rem);
+}
