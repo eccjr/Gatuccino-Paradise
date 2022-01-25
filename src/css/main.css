@@ -264,6 +264,8 @@ nav {
 #first-section .image-col {
     max-width: 420px;
     height: 650px;
+    box-shadow: 4px 2px 6px rgba(0, 0, 0, .16);
+    transition: transform .4s ease-out;
 }
 
 .image-col img {
@@ -271,6 +273,9 @@ nav {
     height: 100%;
     object-fit: cover;
 }
+
+/* Hover-Animation */
+.image-col:hover { transform: translateY(-2rem); }
 
 /* Border-Hack */
 .border-wrapper {
