@@ -48,8 +48,6 @@ body {
 /* ========================= Navbar */
 nav {
     width: 100%;
-    display: flex;
-    justify-content: center;
     background: var(--bege-claro);
 }
 
@@ -61,6 +59,7 @@ nav {
     align-items: center;
     flex: 1 0 auto;
     background: inherit;
+    margin: 0 auto;
 }
 
 .navbar-container a {
@@ -159,6 +158,8 @@ nav {
 }
 
 .nav-tel .tel-icon { margin-right: 5px; }
+
+/* ========================= Primeira Seção: Sobre o Café */
 
 /* ========================= Botão Fixo do WhatsApp */
 .fixed-button {
