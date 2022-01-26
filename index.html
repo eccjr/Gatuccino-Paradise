@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="src/images/logo.png" />
     
     <!-- Bootstrap Import -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
     
     <!-- Google Material Icons & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,6 +93,43 @@
             </div>
         </section>
         
+
+        <!-- Segunda seção sobre o café -->
+        <section id="second-section" class="section-frame">
+            <div class="section-container">
+                <!-- Nome do Café -->
+                
+                <div class="flex-reverse content-container">
+                    <!-- Coluna de Conteúdo (Texto) -->
+                    <div class="content-col">
+                        <header>
+                            <h2 class="section-header">Nosso Estabelecimento</h2>
+                        </header>
+                        <header> <!-- Título do Blog -->
+                            <h2 class="section-caption">Divirta-se Com Seus Gatinhos</h2>
+                        </header>
+                        
+                        <div class="divider-horizontal"></div>
+                        
+                        <!-- Conteúdo de Texto da Seção -->
+                        <div class="section-about">
+                            <p>Aqui você pode desfrutar de cafés, chocolates e de muitas outras delícias. Traga seu gato para se divertir e fazer novos amiguinhos!</p>
+                        </div>
+                        
+                        <!-- Botões da Seção -->
+                        <div class="buttons flex">
+                            <a class="butao primary-butao" href="#" >Traga seu gato!</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Coluna da Imagem -->
+                    <div class="image-col border-wrapper">
+                        <img src="src/images/section-01.jpg" alt="Foto de uma de nossas mesas disponíveis." />
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Segunda Seção: Sobre o Estabelecimento -->
         <section id="second-section" class="section-frame">
             <div class="section-container">
@@ -152,6 +189,7 @@
             </div>
         </section>
 
+        <!-- Terceira Seção: Nossos Produtos -->
         <section id="third-section">
             <div class="section-container">
                 
@@ -161,12 +199,53 @@
         <!-- Botão Fixo do WhatsApp -->
         <div class="fixed-button">
             <a class="button-container" href="https://wa.me/+5516988105250" target="_blank">
-                <img src="/src/images/cat_icon.png" class="cat-icon" />
+                <img src="src\images\cat_icon.png" class="cat-icon" />
                 <span class="material-icons wpp-icon">whatsapp</span>
             </a>
         </div>
     </div>
-    
+
+    <!-- Form Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title section-caption" id="exampleModalLabel">Reserva</h1>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group">
+                        <!-- eu fiz isso, me condenem mas tava com preguiça -->
+                        <label style="font-size: 32px;margin-bottom: 15px;" for="">Nome:</label>
+                        <input style="font-size: 24px;" class="form-control" type="text">
+                        <label style="font-size: 32px;margin-bottom: 15px;" for="">Número de pessoas:</label>
+                        <input style="font-size: 24px;" class="form-control" type="number">
+                        <label style="font-size: 32px;margin-bottom: 15px;" for="">Selecione a data da reserva:</label>
+                        <input style="font-size: 24px;margin-bottom: 15px;" class="form-control" id="reserva" type="date">
+                        <button style="margin: 10px auto;" class="butao primary-butao" type="submit">Reservar</button>
+                    </div>
+                </form>
+                <script>
+                    let reserva = document.getElementById("reserva");
+                    let date = new Date();
+                    let dd = date.getDate();
+                    let mm = date.getMonth() + 1;
+                    let yy = date.getFullYear();
+                                    
+                    if(dd < 10)
+                        dd = '0' + dd;
+                    if(mm < 10)
+                        mm = '0' + mm;
+                                    
+                    let string = yy + '-' + mm + '-' + dd;
+                    
+                    reserva.setAttribute("min",string)
+                </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Imported Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
