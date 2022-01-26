@@ -173,7 +173,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title section-caption" id="exampleModalLabel">Reserva</h1>
+              <h2 class="modal-title section-caption" id="exampleModalLabel">Reserva</h2>
             </div>
             <div class="modal-body">
                 <form action="">
@@ -200,9 +200,9 @@
                     if(mm < 10)
                         mm = '0' + mm;
                                     
-                    let string = yy + '-' + mm + '-' + dd;
+                    let minDate = yy + '-' + mm + '-' + dd;
                     
-                    reserva.setAttribute("min",string)
+                    reserva.setAttribute("min", minDate);
                 </script>
             </div>
           </div>
