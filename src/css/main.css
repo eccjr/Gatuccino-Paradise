@@ -193,7 +193,7 @@ nav {
 /* Coluna de Texto - Conteúdo */
 .flex, .flex-reverse {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
 }
@@ -232,7 +232,7 @@ nav {
 }
 
 .butao {
-    display: inline-block;
+    display: block;
     width: 250px;
     padding: 22px 15px;
     font-size: 24px;
@@ -247,14 +247,14 @@ nav {
     transform: translateY(-6px);
 }
 
-.buttons .primary-butao {
+.primary-butao {
     background: var(--marrom-cafe);
     color: var(--cinza-claro);
     text-decoration: none;
     margin-right: 60px;
 }
 
-.buttons .secondary-butao {
+.secondary-butao {
     background: inherit;
     color: var(--marrom-cafe);
 }
@@ -287,6 +287,24 @@ nav {
     background: var(--marrom-escuro);
     padding-top: 160px;
     margin-top: -100px;
+}
+
+#second-section .content-col{
+    max-width: 520px;
+}
+
+#second-section .flex-reverse{
+    justify-content: space-between;
+}
+
+#second-section .section-caption, #second-section .section-about{
+    color: var(--light-text-color);
+    
+}
+
+#second-section .image-col{
+    max-width: 500px;
+    height: 650px;
 }
 
 /* ========================= Botão Fixo do WhatsApp */
