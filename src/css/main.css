@@ -16,7 +16,7 @@
 
     /* Tamanhos Variáveis */
     --width-container-desktop: 1110px;
-    --height-nav-desktop: 100px;
+    --height-nav_desktop: 100px;
 
     /* Utilidades */
     --light-text-color: var(--cinza-claro);
@@ -41,8 +41,6 @@
     font-family: "Rokkitt", Arial, sans-serif;
 }
 
-.meows-font { font-family: "Meows"; }
-
 /* ========================= Elementos de Controle da Página */
 body {
     background-color: var(--bege-claro);
@@ -54,39 +52,90 @@ body {
     min-height: 100vh;
 }
 
+/* ========================= Utilidades */
+a:hover { color: inherit; }
+.flex, .flex-reverse {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.flex-reverse { flex-direction: row-reverse; }
+
+.btnr {
+    display: block;
+    width: 250px;
+    height: 70px;
+    padding: 17px 15px;
+    font-size: 24px;
+    border-radius: 4px;
+    text-align: center;
+    transition: all .2s ease-in;
+}
+
+.primary-btn {
+    background: var(--marrom-cafe);
+    color: var(--cinza-claro);
+    text-decoration: none;
+    margin-right: 60px;
+}
+
+.secondary-btn {
+    background: inherit;
+    color: var(--marrom-cafe);
+}
+
+/* Hover-Animation */
+.primary-btn:hover { color: var(--cinza-claro); }
+.secondary-btn:hover { color: var(--marrom-cafe); }
+.btnr:hover {
+    opacity: .8;
+    transform: translateY(-6px);
+}
+
+.divider-horizontal {
+    width: 300px;
+    border-top: 2px solid var(--bege-escuro);
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.divider-vertical {
+    height: 300px;
+    border-left: 2px solid var(--bege-escuro);
+}
+
+.meows-font { font-family: "Meows"; }
+
 /* ========================= Navbar */
 nav {
     width: 100%;
     background: var(--bege-claro);
 }
 
-.navbar-container {
+.navbar_container {
     max-width: var(--width-container-desktop);
-    height: var(--height-nav-desktop);
-    display: flex;
-    justify-content: space-between;
+    height: var(--height-nav_desktop);
     align-items: center;
     flex: 1 0 auto;
     background: inherit;
     margin: 0 auto;
 }
 
-.navbar-container a {
+.navbar_container a {
     color: var(--marrom-escuro);
     text-decoration: none;
 }
 
-/* Navbar-Columns */
-.nav-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* navbar_Columns */
+.nav_section {
     background: inherit;
     text-shadow: var(--basic-text-shadow);
 }
 
 /* --------> Logo-Brand */
-.navbar-brand {
+.navbar_brand {
     width: 215px;
     height: 80px;
     font-size: 26px;
@@ -94,14 +143,14 @@ nav {
     transition: transform .2s ease-in-out;
 }
 
-.navbar-brand img {
+.navbar_brand img {
     width: 80px;
     height: 80px;
     object-fit: fill;
     margin-right: 15px;
 }
 
-.navbar-brand .brand-name {
+.navbar_brand .brand-name {
     text-align: left;
     margin-top: 11px;
     color: var(--cinza-claro);
@@ -119,46 +168,47 @@ nav {
 }
 
 /* Logo Animation */
-.navbar-brand:hover { transform: translateY(-4px); }
+.navbar_brand:hover { transform: translateY(-4px); }
 
 /* --------> Seção de Links de Navegação */
-.navbar-collapse { max-width: 460px; }
+.navbar_collapse { max-width: 460px; }
 
-/* Nav-Links */
-.navbar-nav {
+/* nav_Links */
+.navbar_nav {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     list-style: none;
     font-size: 20px;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-item {
+.nav_item {
     width: 100px;
     height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-shadow: var(--basic-text-shadow);
 }
 
-.nav-item .nav-link { padding: 0.6rem 1.5rem; }
+.nav_item .nav_link { padding: 0.6rem 1.5rem; }
+.nav_item .nav_link.active { color: var(--marrom-cafe); }
 
 /* -> Animações nos Elementos da Navbar */
-.nav-item .nav-link,
-.nav-tel { transition: all .2s ease-in-out; }
+.nav_item,
+.nav_item .nav_link,
+.nav_tel {
+    transition: all .2s ease-in-out;
+}
 
 /* Hovering Animations */
-.nav-item .nav-link:hover,
-.nav-tel:hover {
+.nav_item:hover,
+.nav_item:hover .nav_link,
+.nav_tel:hover {
     color: var(--marrom-cafe);
     transform: translateY(-4px);
 }
 
 /* --------> Seção do Telefone */
-.nav-tel {
+.nav_tel {
     max-width: 225px;
     padding: 0.6rem 1.5rem;
     font-size: 18px;
@@ -166,7 +216,7 @@ nav {
     text-shadow: var(--basic-text-shadow);
 }
 
-.nav-tel .tel-icon { margin-right: 5px; }
+.nav_tel .tel-icon { margin-right: 5px; }
 
 /* ========================= Primeira Seção: Sobre o Café */
 .section-frame {
@@ -191,15 +241,6 @@ nav {
 }
 
 /* Coluna de Texto - Conteúdo */
-.flex, .flex-reverse {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-}
-
-.flex-reverse { flex-direction: row-reverse; }
-
 #first-section .content-col {
     width: 600px;
     margin-right: 1rem;
@@ -212,18 +253,6 @@ nav {
     color: var(--dark-text-color);
 }
 
-.divider-horizontal {
-    width: 300px;
-    border-top: 2px solid var(--bege-escuro);
-    margin-top: 15px;
-    margin-bottom: 35px;
-}
-
-.divider-vertical {
-    height: 300px;
-    border-left: 2px solid var(--bege-escuro);
-}
-
 .content-col .section-about {
     font-size: 24px;
     font-weight: 500;
@@ -231,51 +260,24 @@ nav {
     margin-bottom: 50px;
 }
 
-.btn {
-    display: inline-block;
-    width: 250px;
-    height: 70px;
-    padding: 22px 15px;
-    font-size: 24px;
-    border-radius: 4px;
-    text-align: center;
-    transition: all .2s ease-in;
-}
-
-/* Hover-Animation */
-.btn:hover {
-    opacity: .8;
-    transform: translateY(-6px);
-}
-
-.buttons .primary-btn {
-    background: var(--marrom-cafe);
-    color: var(--cinza-claro);
-    text-decoration: none;
-    margin-right: 60px;
-}
-
-.buttons .secondary-btn {
-    background: inherit;
-    color: var(--marrom-cafe);
-}
+.buttons { justify-content: flex-start; }
 
 /* Coluna de Imagem */
 #first-section .image-col {
     max-width: 420px;
     height: 650px;
     box-shadow: 4px 2px 6px rgba(0, 0, 0, .16);
-    transition: transform .4s ease-out;
 }
 
-.image-col img {
+.image-col .photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 /* Hover-Animation */
-.image-col:hover { transform: translateY(-2rem); }
+#first-section .image-col { transition: transform .4s ease-out; }
+#first-section .image-col:hover { transform: translateY(-2rem); }
 
 /* Border-Hack */
 .border-wrapper {
@@ -288,6 +290,29 @@ nav {
     background: var(--marrom-escuro);
     padding-top: 160px;
     margin-top: -100px;
+}
+
+#second-section .section-caption,
+#second-section .section-about {
+    color: var(--light-text-color);
+}
+
+#second-section .image-col {
+    max-width: 500px;
+    width: 500px;
+    height: 650px;
+}
+
+#second-section .content-col {
+    max-width: 520px;
+    margin-left: 15px;
+}
+
+/* ========================= Terceira Seção: Nossos Produtos */
+#third-section {
+    background: var(--bege-claro);
+    padding-top: 160px;
+    margin-top: -50px;
 }
 
 /* ========================= Botão Fixo do WhatsApp */
@@ -330,6 +355,6 @@ nav {
 
 /* Animation */
 .fixed-button:hover {
-    background: rgba(0, 0, 0, .1);
+    background: var(--cinza-medio);
     transform: translateY(-0.8rem);
 }
