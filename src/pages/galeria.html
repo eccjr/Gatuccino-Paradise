@@ -4,86 +4,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="shortcut icon" href="../images/logo.png" />
+    
+    <!-- Bootstrap Import -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+    
+    <!-- Google Material Icons & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/gallery-style.css">
+
+    <!-- Navbar Stylesheet-->
+    <link rel="stylesheet" href="../css/navbar-stle.css">
+
     <title>Gatuccino Paradise</title>
 </head>
 <body>
 
-    <div class="galery-description">
-        <h1>Mural felino</h1>
-        <p>uma descrição relevante</p>
-    </div>
-   
-    <div class="grid">
-        <div class="image_type1">
-            <img src="../cat_galery/cat1.jpeg" class="image">
+    <div id="content">
+        <nav>
+            <div class="navbar-container">
+                <!-- Primeira Seção: Porção da Logo -->
+                <a href="#" class="nav_section navbar_brand">
+                    <img src="../images/logo.png" alt="Logomarca da Cafeteria Gatuccino Paradise." />
+                    <span class="meows-font brand-name">Gatuccino Paradise</span>
+                </a>
+                
+                <!-- Segunda Seção: Links de Navegação -->
+                <div class="nav_section navbar_collapse">
+                    <ul class="navbar_nav">
+                        <li class="nav_item">
+                            <a href="../../index.html" class="nav_link active">Home</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="../pages/adote.html" class="nav_link">Adote</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">Fotos</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="../../index.html" class="nav_link">Visitas</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Terceira Seção: Telefone -->
+                <a href="tel:+551712349382" class="nav_section nav-tel">
+                    <div class="material-icons tel-icon">phone</div>
+                    <span class="tel-number">+55 (17) 1234-9382</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="galery-description">
+            <h1>Mural felino</h1>
+            <p>uma descrição relevante</p>
         </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat2.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat3.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat4.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat5.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat6.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat7.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat8.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat9.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat10.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat11.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat12.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat13.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat14.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat15.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat16.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat17.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat18.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat19.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat20.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat21.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat22.jpeg" class="image">
-        </div>
-        <div class="image_type1">
-            <img src="../cat_galery/cat23.jpeg" class="image">
+    
+        <div class="grid">
+            <div class="image_type1">
+                <img src="../cat_galery/cat1.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat2.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat3.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat4.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat5.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat6.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat7.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat8.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat9.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat10.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat11.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat12.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat13.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat14.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat15.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat16.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat17.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat18.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat19.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat20.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat21.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat22.jpeg" class="image">
+            </div>
+            <div class="image_type1">
+                <img src="../cat_galery/cat23.jpeg" class="image">
+            </div>
         </div>
     </div>
 

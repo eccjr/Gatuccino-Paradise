@@ -1,11 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-family: "Rokkit", Arial, sans-serif;
-}
-
 /* ====================== Galeria */
 .grid {
     display: flex;
