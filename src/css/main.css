@@ -77,7 +77,7 @@ nav {
 }
 
 /* Navbar-Columns */
-.nav-section {
+.nav_section {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -86,7 +86,7 @@ nav {
 }
 
 /* --------> Logo-Brand */
-.navbar-brand {
+.navbar_brand {
     width: 215px;
     height: 80px;
     font-size: 26px;
@@ -94,14 +94,14 @@ nav {
     transition: transform .2s ease-in-out;
 }
 
-.navbar-brand img {
+.navbar_brand img {
     width: 80px;
     height: 80px;
     object-fit: fill;
     margin-right: 15px;
 }
 
-.navbar-brand .brand-name {
+.navbar_brand .brand-name {
     text-align: left;
     margin-top: 11px;
     color: var(--cinza-claro);
@@ -119,13 +119,13 @@ nav {
 }
 
 /* Logo Animation */
-.navbar-brand:hover { transform: translateY(-4px); }
+.navbar_brand:hover { transform: translateY(-4px); }
 
 /* --------> Seção de Links de Navegação */
-.navbar-collapse { max-width: 460px; }
+.navbar_collapse { max-width: 460px; }
 
-/* Nav-Links */
-.navbar-nav {
+/* nav_links */
+.navbar_nav {
     width: 100%;
     display: flex;
     align-items: center;
@@ -135,7 +135,7 @@ nav {
     font-weight: bold;
 }
 
-.nav-item {
+.nav_item {
     width: 100px;
     height: 38px;
     display: flex;
@@ -144,14 +144,14 @@ nav {
     text-shadow: var(--basic-text-shadow);
 }
 
-.nav-item .nav-link { padding: 0.6rem 1.5rem; }
+.nav_item .nav_link { padding: 0.6rem 1.5rem; }
 
 /* -> Animações nos Elementos da Navbar */
-.nav-item .nav-link,
+.nav_item .nav_link,
 .nav-tel { transition: all .2s ease-in-out; }
 
 /* Hovering Animations */
-.nav-item .nav-link:hover,
+.nav_item .nav_link:hover,
 .nav-tel:hover {
     color: var(--marrom-cafe);
     transform: translateY(-4px);
@@ -231,10 +231,9 @@ nav {
     margin-bottom: 50px;
 }
 
-.btn {
+.butao {
     display: inline-block;
     width: 250px;
-    height: 70px;
     padding: 22px 15px;
     font-size: 24px;
     border-radius: 4px;
@@ -243,19 +242,19 @@ nav {
 }
 
 /* Hover-Animation */
-.btn:hover {
+.butao:hover {
     opacity: .8;
     transform: translateY(-6px);
 }
 
-.buttons .primary-btn {
+.buttons .primary-butao {
     background: var(--marrom-cafe);
     color: var(--cinza-claro);
     text-decoration: none;
     margin-right: 60px;
 }
 
-.buttons .secondary-btn {
+.buttons .secondary-butao {
     background: inherit;
     color: var(--marrom-cafe);
 }

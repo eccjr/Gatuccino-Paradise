@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="src/images/logo.png" />
     
     <!-- Bootstrap Import -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
     
     <!-- Google Material Icons & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,34 +22,34 @@
 </head>
 <body>
     <div id="content">
-        <nav class="navbar">
+        <nav>
             <div class="navbar-container">
                 <!-- Primeira Seção: Porção da Logo -->
-                <a href="#" class="nav-section navbar-brand">
+                <a href="#" class="nav_section navbar_brand">
                     <img src="src/images/logo.png" alt="Logomarca da Cafeteria Gatuccino Paradise." />
                     <span class="meows-font brand-name">Gatuccino Paradise</span>
                 </a>
                 
                 <!-- Segunda Seção: Links de Navegação -->
-                <div class="nav-section navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active">Home</a>
+                <div class="nav_section navbar_collapse">
+                    <ul class="navbar_nav">
+                        <li class="nav_item">
+                            <a href="#" class="nav_link active">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Adote</a>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">Adote</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Fotos</a>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">Fotos</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Visitas</a>
+                        <li class="nav_item">
+                            <a href="#" class="nav_link">Visitas</a>
                         </li>
                     </ul>
                 </div>
                 
                 <!-- Terceira Seção: Telefone -->
-                <a href="tel:+551712349382" class="nav-section nav-tel">
+                <a href="tel:+551712349382" class="nav_section nav-tel">
                     <div class="material-icons tel-icon">phone</div>
                     <span class="tel-number">+55 (17) 1234-9382</span>
                 </a>
@@ -80,8 +80,8 @@
                         
                         <!-- Botões da Seção -->
                         <div class="buttons">
-                            <a href="#" class="btn primary-btn" role="button">Faça hoje sua reserva</a>
-                            <a href="#" class="btn secondary-btn" role="button">Receba em casa</a>
+                            <a href="#" class="butao primary-butao" role="button" type="button" data-toggle="modal" data-target="#exampleModal">Faça hoje sua reserva</a>
+                            <a href="#" class="butao secondary-butao" role="button">Receba em casa</a>
                         </div>
                     </div>
                     
@@ -103,12 +103,53 @@
         <!-- Botão Fixo do WhatsApp -->
         <div class="fixed-button">
             <a class="button-container" href="https://wa.me/+5516988105250" target="_blank">
-                <img src="/src/images/cat_icon.png" class="cat-icon" />
+                <img src="src\images\cat_icon.png" class="cat-icon" />
                 <span class="material-icons wpp-icon">whatsapp</span>
             </a>
         </div>
     </div>
-    
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <label for="">Nome:</label>
+                    <input type="text">
+                    <label for="">Número de pessoas:</label>
+                    <input type="number">
+                    <input id="reserva" type="date">
+                </form>
+                <script>
+                    let reserva = document.getElementById("reserva");
+                    let date = new Date();
+                    let dd = date.getDate();
+                    let mm = date.getMonth() + 1;
+                    let yy = date.getFullYear();
+                                    
+                    if(dd < 10)
+                        dd = '0' + dd;
+                    if(mm < 10)
+                        mm = '0' + mm;
+                                    
+                    let string = yy + '-' + mm + '-' + dd;
+                    
+                    reserva.setAttribute("min",string)
+                </script>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="butao butao-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="butao butao-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Imported Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
