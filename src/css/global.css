@@ -1,0 +1,43 @@
+@import url(colors.css);
+
+:root {
+    /* Tamanhos Variáveis */
+    --width-container-desktop: 1110px;
+    --height-nav_desktop: 100px;
+    font-size: 16px;
+
+    /* Utilidades */
+    --light-text-color: var(--cinza-claro);
+    --dark-text-color: var(--marrom-cafe);
+    --basic-text-shadow: 0 4px 8px rgba(0, 0, 0, .16);
+    --std-border:
+        var(--marrom-cafe) 0%,
+        rgba(255, 255, 255, .8) 25%,
+        rgba(255, 255, 255, .8) 75%,
+        var(--marrom-escuro) 100%;
+}
+
+/* ========================= Elementos de Controle da Página */
+body {
+    background-color: var(--bege-claro);
+    overflow-x: hidden;
+
+    /* Sobrescrevendo Cursor Padrão */
+    cursor: url("../utils/cat-cursor.cur"), auto;
+}
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ----> Text Selection Color */
+::-moz-selection { /* Code for Firefox */
+    color: var(--bege-claro);
+    background: var(--bege-escuro);
+}
+
+::selection {
+    color: var(--bege-claro);
+    background: var(--bege-escuro);
+}

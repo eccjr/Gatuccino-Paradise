@@ -1,10 +1,6 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-family: "Rokkit", Arial, sans-serif;
-}
+@import url(../reset.css);
+@import url(../global.css);
+@import url(../navbar.css);
 
 /* ====================== Galeria */
 .grid {
