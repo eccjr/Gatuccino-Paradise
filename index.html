@@ -188,26 +188,14 @@
                         <button style="margin: 10px auto;" class="butao primary-butao" type="submit">Reservar</button>
                     </div>
                 </form>
-                <script>
-                    let reserva = document.getElementById("reserva");
-                    let date = new Date();
-                    let dd = date.getDate();
-                    let mm = date.getMonth() + 1;
-                    let yy = date.getFullYear();
-                                    
-                    if(dd < 10)
-                        dd = '0' + dd;
-                    if(mm < 10)
-                        mm = '0' + mm;
-                                    
-                    let minDate = yy + '-' + mm + '-' + dd;
-                    
-                    reserva.setAttribute("min", minDate);
-                </script>
             </div>
           </div>
         </div>
       </div>
+
+
+    <!-- Project Scripts -->
+    <script src="src/js/getMinDate.js"></script>
 
     <!-- Imported Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
