@@ -1,0 +1,54 @@
+/* ========================= Utilidades */
+/* =========== Flex Classes */
+.flex, .flex-reverse {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.flex-reverse { flex-direction: row-reverse; }
+
+/* =========== Estilização dos Botões */
+.btnr, .primary-btn, .secondary-btn {
+    display: block;
+    width: 250px;
+    height: 70px;
+    padding: 17px 15px;
+    font-size: 24px;
+    border-radius: 4px;
+    text-align: center;
+    transition: all .2s ease-in;
+}
+
+.primary-btn {
+    background: var(--marrom-cafe);
+    color: var(--cinza-claro);
+    text-decoration: none;
+}
+
+.secondary-btn {
+    background: inherit;
+    color: var(--marrom-cafe);
+}
+
+/* Hover-Animation */
+.primary-btn:hover { color: var(--cinza-claro); }
+.secondary-btn:hover { color: var(--marrom-cafe); }
+.btnr:hover {
+    opacity: .8;
+    transform: translateY(-6px);
+}
+
+/* =========== Divisores */
+.divider-horizontal {
+    width: 300px;
+    border-top: 2px solid var(--bege-escuro);
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.divider-vertical {
+    height: 300px;
+    border-left: 2px solid var(--bege-escuro);
+}

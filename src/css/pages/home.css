@@ -1,113 +1,6 @@
-@import url(global.css);
-
-/* ========================= Navbar */
-nav {
-    width: 100%;
-    background: var(--bege-claro);
-}
-
-.navbar_container {
-    max-width: var(--width-container-desktop);
-    height: var(--height-nav_desktop);
-    align-items: center;
-    flex: 1 0 auto;
-    background: inherit;
-    margin: 0 auto;
-}
-
-.navbar_container a {
-    color: var(--marrom-escuro);
-    text-decoration: none;
-}
-
-/* navbar_Columns */
-.nav_section {
-    background: inherit;
-    text-shadow: var(--basic-text-shadow);
-}
-
-/* --------> Logo-Brand */
-.navbar_brand {
-    width: 215px;
-    height: 80px;
-    font-size: 26px;
-    font-weight: bold;
-    transition: transform .2s ease-in-out;
-}
-
-.navbar_brand img {
-    width: 80px;
-    height: 80px;
-    object-fit: fill;
-    margin-right: 15px;
-}
-
-.navbar_brand .brand-name {
-    text-align: left;
-    margin-top: 11px;
-    color: var(--cinza-claro);
-    
-    /* Provisório */
-    text-shadow:
-        2px 0 0 var(--marrom-cafe),
-        -2px 0 0 var(--marrom-cafe),
-        0 2px 0 var(--marrom-cafe),
-        0 -2px 0 var(--marrom-cafe),
-        1px 1px var(--marrom-cafe),
-        -1px -1px 0 var(--marrom-cafe),
-        1px -1px 0 var(--marrom-cafe),
-        -1px 1px 0 var(--marrom-cafe);
-}
-
-/* Logo Animation */
-.navbar_brand:hover { transform: translateY(-4px); }
-
-/* --------> Seção de Links de Navegação */
-.navbar_collapse { max-width: 460px; }
-
-/* nav_links */
-.navbar_nav {
-    width: 100%;
-    list-style: none;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-}
-
-.nav_item {
-    width: 100px;
-    text-shadow: var(--basic-text-shadow);
-}
-
-.nav_item .nav_link { padding: 0.6rem 1.5rem; }
-.nav_item .nav_link.active { color: var(--marrom-cafe); }
-
-/* -> Animações nos Elementos da Navbar */
-.nav_item,
-.nav_item .nav_link,
-.nav_tel {
-    transition: all .2s ease-in-out;
-}
-
-/* Hovering Animations */
-.nav_item:hover,
-.nav_item:hover .nav_link,
-.nav_tel:hover {
-    color: var(--marrom-cafe);
-    transform: translateY(-4px);
-}
-
-/* --------> Seção do Telefone */
-.nav_tel {
-    max-width: 225px;
-    padding: 0.6rem 1.5rem;
-    font-size: 18px;
-    font-weight: bold;
-    text-shadow: var(--basic-text-shadow);
-}
-
-.nav_tel .tel-icon { margin-right: 5px; }
+@import url(../reset.css);
+@import url(../global.css);
+@import url(../navbar.css);
 
 /* ========================= Primeira Seção: Sobre o Café */
 .section-frame {
@@ -151,7 +44,10 @@ nav {
     margin-bottom: 50px;
 }
 
-.buttons { justify-content: flex-start; }
+.buttons {
+    justify-content: flex-start;
+    gap: 60px;
+}
 
 /* Coluna de Imagem */
 #first-section .image-col {

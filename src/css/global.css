@@ -1,22 +1,10 @@
-/* Meows Font Import */
-@font-face {
-    font-family: "Meows";
-    src: url("../utils/Meows-VGWjy.ttf");
-}
+@import url(colors.css);
 
 :root {
-    /* Variáveis de Cores utilizadas */
-    --marrom-cafe: #7D3F20;
-    --marrom-escuro: #481D01;
-    --bege-claro: #F4EBD0;
-    --bege-escuro: #D6AD60;
-    --cinza-claro: #EBEDFC;
-    --cinza-medio: #C7C7C7;
-    --cinza-escuro: #979797;
-
     /* Tamanhos Variáveis */
     --width-container-desktop: 1110px;
     --height-nav_desktop: 100px;
+    font-size: 16px;
 
     /* Utilidades */
     --light-text-color: var(--cinza-claro);
@@ -27,26 +15,9 @@
         rgba(255, 255, 255, .8) 25%,
         rgba(255, 255, 255, .8) 75%,
         var(--marrom-escuro) 100%;
-
-    font-size: 16px;
 }
-
-* { /* Atualizando valores globais */
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-family: "Rokkitt", Arial, sans-serif;
-}
-
-/* Font-Meows Class */
-.meows-font { font-family: "Meows"; }
-
 
 /* ========================= Elementos de Controle da Página */
-/* Pointer Custom Cursor */
-a, button, [role="button"] { cursor: url("../utils/cat-pointer.cur"), pointer !important; }
-
 body {
     background-color: var(--bege-claro);
     overflow-x: hidden;
@@ -60,10 +31,6 @@ body {
     min-height: 100vh;
 }
 
-/* ========================= Utilidades */
-/* ----> Overwriting BS a:hover */
-a:hover { color: inherit; }
-
 /* ----> Text Selection Color */
 ::-moz-selection { /* Code for Firefox */
     color: var(--bege-claro);
@@ -73,59 +40,4 @@ a:hover { color: inherit; }
 ::selection {
     color: var(--bege-claro);
     background: var(--bege-escuro);
-}
-
-/* =========== Flex Classes */
-.flex, .flex-reverse {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-}
-
-.flex-reverse { flex-direction: row-reverse; }
-
-/* =========== Estilização dos Botões */
-.btnr, .primary-btn, .secondary-btn {
-    display: block;
-    width: 250px;
-    height: 70px;
-    padding: 17px 15px;
-    font-size: 24px;
-    border-radius: 4px;
-    text-align: center;
-    transition: all .2s ease-in;
-}
-
-.primary-btn {
-    background: var(--marrom-cafe);
-    color: var(--cinza-claro);
-    text-decoration: none;
-    margin-right: 60px;
-}
-
-.secondary-btn {
-    background: inherit;
-    color: var(--marrom-cafe);
-}
-
-/* Hover-Animation */
-.primary-btn:hover { color: var(--cinza-claro); }
-.secondary-btn:hover { color: var(--marrom-cafe); }
-.btnr:hover {
-    opacity: .8;
-    transform: translateY(-6px);
-}
-
-/* =========== Divisores */
-.divider-horizontal {
-    width: 300px;
-    border-top: 2px solid var(--bege-escuro);
-    margin-top: 15px;
-    margin-bottom: 35px;
-}
-
-.divider-vertical {
-    height: 300px;
-    border-left: 2px solid var(--bege-escuro);
 }

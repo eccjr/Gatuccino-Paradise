@@ -1,4 +1,6 @@
-@import url(global.css);
+@import url(../reset.css);
+@import url(../global.css);
+@import url(../navbar.css);
 
 /* ====================== Galeria */
 .grid {
