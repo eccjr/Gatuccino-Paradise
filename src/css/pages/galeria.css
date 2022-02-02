@@ -6,6 +6,7 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .image_type1 {
@@ -16,6 +17,7 @@
     width: 18vw;
     height: 25vh;
     background-size: cover;
+    margin: 10px
 }
 
 .image {
@@ -23,3 +25,48 @@
     width: 100%;
     height: auto;
 }
+
+.section-header {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--bege-escuro);
+    margin-bottom: 15px;
+}
+
+.section-frame {
+    width: 100%;
+    padding-top: 120px;
+    background: var(--bege-claro);
+}
+
+.section-container {
+    max-width: var(--width-container-desktop);
+    background: inherit;
+    margin: 0 auto;
+    text-shadow: var(--basic-text-shadow);
+}
+
+.galery-description h2{
+    font-size: 72px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--dark-text-color);
+}
+
+.galery-description p{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--dark-text-color);
+    margin-bottom: 50px;
+}
+
+.grid-background{
+    background-color: var(--marrom-escuro);
+}
+
+.grid{
+    padding-top: 40px;
+}
+
+
