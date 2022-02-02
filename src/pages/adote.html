@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="shortcut icon" href="../../public/logo.png" />
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+
     <!-- Google Material Icons & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
     <title>Adote - Gatuccino Paradise</title>
 </head>
 <body>
-    <div id="content">
+    <div id="app">
         <nav>
             <div class="navbar_container flex">
                 <!-- Primeira Seção: Porção da Logo -->
@@ -62,10 +63,86 @@
                 </div>
             </div>
         </nav>
-    </div>
+        <div class="main-content">
+            <img v-show="gatoAtual == 'Gilberto'" src="../images/cat-gallery/Gilberto.jpeg" class="gatinho" alt="">
+            <img v-show="gatoAtual == 'Ronaldo'" src="../images/cat-gallery/Ronaldo.jpeg" class="gatinho" alt="">
+            <img v-show="gatoAtual == 'Zequinha'" src="../images/cat-gallery/Zequinha.jpeg" class="gatinho" alt="">
+            <img v-show="gatoAtual == 'Paçoca'" src="../images/cat-gallery/Paçoca.jpeg" class="gatinho" alt="">
 
+            <label for="">Selecione seu gatinho!</label>
+            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Gilberto'" value="Gilberto">Gilberto</button>
+            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Ronaldo'" value="Ronaldo">Ronaldo</button>
+            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Zequinha'" value="Zequinha">Zequinha</button>
+            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Paçoca'" value="Paçoca">Paçoca</button>
+            <form action="">
+                <div class="form-group">
+                        <label for="">Qual gatinho você quer adotar?</label>
+                        <input class="form-control" type="text" :value="gatoAtual" disabled="true"></input>
+                    <label for="">Seu nome:</label>
+                    <input class="form-control" type="text" required>
+                    <label for="">Qual a data da retirada do gatinho?</label>
+                    <input class="form-control" type="date" name="" id="" required>
+                </div>
+                <button style="margin: 15px auto;" class="btnr primary-btn">Adotar!</button>
+            </form>
+        </div>
+        <section id="visite">
+            <div class="section-container flex">
+                <div class="visite-col local">
+                    <h2 class="section-header">Venha nos visitar</h2>
+                    <div class="col-content">
+                        <p class="col-text"><strong>Endereço:</strong> Avenida dos Gatos, nº169, Bairro Miau - São José do Rio Preto</p>
+                        <iframe class="border-wrapper" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3730.1523117617444!2d-49.36200658545349!3d-20.785125086130865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bc52cef193eee7%3A0xcc4133d50bcf8239!2sInstituto%20de%20Bioci%C3%AAncias%2C%20Letras%20e%20Ci%C3%AAncias%20Exatas%20UNESP!5e0!3m2!1spt-BR!2sbr!4v1643814092991!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>  
+                <div class="visite-col atendimento">
+                    <h2 class="section-header">Atendimento</h2>
+                    <div class="col-content">
+                        <ul class="footer-list">
+                            <li>SEG | 08:00h - 18:00h</li>
+                            <li>TER | 08:00h - 18:00h</li>
+                            <li>QUA | FECHADO</li>
+                            <li>QUI | 08:00h - 18:00h</li>
+                            <li>SEX | 08:00h - 18:00h</li>
+                            <li>SAB | 08:00h - 19:00h</li>
+                            <li>DOM | 08:00h - 19:00h</li>
+                        </ul>
+                    </div>
+                </div>  
+                <div class="visite-col">
+                    <h2 class="section-header">Contato</h2>
+                    <div class="col-content">
+                        <p class="col-text"><strong>Telefone:</strong> +55 (17)4002-8922</p>
+                        <p class="col-text"><strong>E-mail:</strong> gato@gatoverde.botao</p>
+                        <p class="col-text"><strong>Redes Sociais:</strong></p>
+                        <div class="footer-social-media">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer style="padding: 30px;text-align: center;background-color: black;color: white;">
+            All rights reserved to GATINHOS
+        </footer>
+    </div>
     <!-- Project Scripts -->
     <script src="../js/mobileNavbar.js"></script>
-    <script src="../js/getMinDate.js"></script>
+    <script src="../js/getMinDate.js"></script>7
+
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                gatoAtual: "Gilberto",
+            }
+        })
+    </script>
+
 </body>
 </html>
