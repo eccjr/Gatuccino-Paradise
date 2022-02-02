@@ -30,29 +30,38 @@
                     <span class="meows-font brand-name">Gatuccino Paradise</span>
                 </a>
                 
-                <!-- Segunda Seção: Links de Navegação -->
-                <div class="nav_section flex navbar_collapse">
-                    <ul class="navbar_nav flex">
-                        <li class="nav_item">
-                            <a href="/index.html" role="link" class="nav_link active">Home</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="/src/pages/adote.html" role="link" class="nav_link">Adote</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="/src/pages/galeria.html" role="link" class="nav_link">Fotos</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#visite" role="link" class="nav_link">Visitas</a>
-                        </li>
-                    </ul>
+                <div class="nav_list flex">
+                    <!-- Segunda Seção: Links de Navegação -->
+                    <div class="nav_section navbar_collapse flex">
+                        <ul class="navbar_nav flex">
+                            <li class="nav_item">
+                                <a href="/index.html" role="link" class="nav_link active">Home</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="/src/pages/adote.html" role="link" class="nav_link">Adote</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="/src/pages/galeria.html" role="link" class="nav_link">Fotos</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="#visite" role="link" class="nav_link">Visitas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Terceira Seção: Telefone -->
+                    <a href="tel:+551712349382" role="link" class="nav_section nav_tel flex">
+                        <div class="material-icons tel-icon">phone</div>
+                        <span class="tel-number">+55 (17) 1234-9382</span>
+                    </a>
                 </div>
-                
-                <!-- Terceira Seção: Telefone -->
-                <a href="tel:+551712349382" role="link" class="nav_section nav_tel flex">
-                    <div class="material-icons tel-icon">phone</div>
-                    <span class="tel-number">+55 (17) 1234-9382</span>
-                </a>
+
+                <!-- Mobile Menu - Hidden -->
+                <div class="mobile-menu">
+                    <div class="line-01"></div>
+                    <div class="line-02"></div>
+                    <div class="line-03"></div>
+                </div>
             </div>
         </nav>
         
@@ -185,7 +194,7 @@
                         <input style="font-size: 24px;" class="form-control" type="number">
                         <label style="font-size: 32px;margin-bottom: 15px;" for="">Selecione a data da reserva:</label>
                         <input style="font-size: 24px;margin-bottom: 15px;" class="form-control" id="reserva" type="date">
-                        <button style="margin: 10px auto;" class="butao primary-butao" type="submit">Reservar</button>
+                        <button style="margin: 10px auto;" class="btnr primary-btn" type="submit">Reservar</button>
                     </div>
                 </form>
             </div>
@@ -195,6 +204,7 @@
 
 
     <!-- Project Scripts -->
+    <script src="src/js/mobileNavbar.js"></script>
     <script src="src/js/getMinDate.js"></script>
 
     <!-- Imported Scripts -->

@@ -3,7 +3,7 @@
 :root {
     /* Tamanhos Variáveis */
     --width-container-desktop: 1110px;
-    --height-nav_desktop: 100px;
+    --height-nav-desktop: 100px;
     font-size: 16px;
 
     /* Utilidades */
@@ -29,15 +29,24 @@ body {
 #content {
     width: 100%;
     min-height: 100vh;
+    min-width: 330px;
 }
+
+/* ----> Mobile Menu Effect */
+#content.active section,
+#content.active footer { opacity: .5; }
 
 /* ----> Text Selection Color */
-::-moz-selection { /* Code for Firefox */
-    color: var(--bege-claro);
-    background: var(--bege-escuro);
+@supports(-moz-appearance: none) { /* Code for Firefox */
+    ::-moz-selection {
+        color: var(--bege-claro);
+        background: var(--bege-escuro);
+    }
 }
 
-::selection {
-    color: var(--bege-claro);
-    background: var(--bege-escuro);
+@supports not (-moz-appearance: none) { /* Code for Non-Firefox Browsers */
+    ::selection {
+        color: var(--bege-claro);
+        background: var(--bege-escuro);
+    }
 }
