@@ -141,7 +141,7 @@ nav {
         top: var(--height-nav-desktop);
         right: 0;
         width: 50vw;
-        height: calc(100vh - var(--height-nav-desktop));
+        height: calc(100vh - var(--height-nav-desktop) * 2.25);
         background: var(--bege-escuro);
         flex-direction: column;
         align-items: center;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="shortcut icon" href="/public/logo.png" />
     
     <!-- Google Material Icons & Fonts -->
@@ -15,7 +15,7 @@
     
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="../css/pages/adote.css">
-
+    
     <title>Adote - Gatuccino Paradise</title>
 </head>
 <body>
@@ -23,36 +23,49 @@
         <nav>
             <div class="navbar_container flex">
                 <!-- Primeira Seção: Porção da Logo -->
-                <a href="#" class="nav_section navbar_brand flex" role="link">
+                <a href="/index.html" class="nav_section navbar_brand flex" role="link">
                     <img src="/public/logo.png" alt="Logomarca da Cafeteria Gatuccino Paradise." />
                     <span class="meows-font brand-name">Gatuccino Paradise</span>
                 </a>
                 
-                <!-- Segunda Seção: Links de Navegação -->
-                <div class="nav_section flex navbar_collapse">
-                    <ul class="navbar_nav flex">
-                        <li class="nav_item">
-                            <a href="/index.html" role="link" class="nav_link active">Home</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="/src/pages/adote.html" role="link" class="nav_link active">Adote</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="/src/pages/galeria.html" role="link" class="nav_link">Fotos</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="/index.html#visite" role="link" class="nav_link">Visitas</a>
-                        </li>
-                    </ul>
+                <div class="nav_list flex">
+                    <!-- Segunda Seção: Links de Navegação -->
+                    <div class="nav_section navbar_collapse flex">
+                        <ul class="navbar_nav flex">
+                            <li class="nav_item">
+                                <a href="/index.html" role="link" class="nav_link">Home</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="/src/pages/adote.html" role="link" class="nav_link active">Adote</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="/src/pages/galeria.html" role="link" class="nav_link">Fotos</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="#visite" role="link" class="nav_link">Visitas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Terceira Seção: Telefone -->
+                    <a href="tel:+551712349382" role="link" class="nav_section nav_tel flex">
+                        <div class="material-icons tel-icon">phone</div>
+                        <span class="tel-number">+55 (17) 1234-9382</span>
+                    </a>
                 </div>
                 
-                <!-- Terceira Seção: Telefone -->
-                <a href="tel:+551712349382" role="link" class="nav_section nav_tel flex">
-                    <div class="material-icons tel-icon">phone</div>
-                    <span class="tel-number">+55 (17) 1234-9382</span>
-                </a>
+                <!-- Mobile Menu - Hidden -->
+                <div class="mobile-menu">
+                    <div class="line-01"></div>
+                    <div class="line-02"></div>
+                    <div class="line-03"></div>
+                </div>
             </div>
         </nav>
     </div>
+
+    <!-- Project Scripts -->
+    <script src="src/js/mobileNavbar.js"></script>
+    <script src="src/js/getMinDate.js"></script>
 </body>
 </html>

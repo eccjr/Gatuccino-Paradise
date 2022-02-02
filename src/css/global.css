@@ -20,16 +20,16 @@
 /* ========================= Elementos de Controle da Página */
 body {
     background-color: var(--bege-claro);
-    overflow-x: hidden;
-
     /* Sobrescrevendo Cursor Padrão */
     cursor: url("../utils/cat-cursor.cur"), auto;
 }
 
 #content {
-    width: 100%;
+    position: relative;
     min-height: 100vh;
     min-width: 330px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* ----> Mobile Menu Effect */
