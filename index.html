@@ -89,7 +89,7 @@
                         
                         <!-- Botões da Seção -->
                         <div class="buttons flex">
-                            <a href="#" class="btnr primary-btn" role="button">Faça hoje sua reserva</a>
+                            <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btnr primary-btn" role="button">Faça hoje sua reserva</a>
                             <a href="#" class="btnr secondary-btn" role="button">Receba em casa</a>
                         </div>
                     </div>
@@ -227,7 +227,9 @@
                 </div>
             </div>
         </section>
-
+        <footer style="padding: 30px;text-align: center;background-color: black;color: white;">
+            All rights reserved to GATINHOS
+        </footer>
         <!-- Botão Fixo do WhatsApp -->
         <div class="fixed-button">
             <a class="button-container" href="https://wa.me/+5516988105250" target="_blank">
@@ -249,11 +251,11 @@
                     <div class="form-group">
                         <!-- eu fiz isso, me condenem mas tava com preguiça -->
                         <label style="font-size: 32px;margin-bottom: 15px;" for="">Nome:</label>
-                        <input style="font-size: 24px;" class="form-control" type="text">
+                        <input style="font-size: 24px;" class="form-control" type="text" required>
                         <label style="font-size: 32px;margin-bottom: 15px;" for="">Número de pessoas:</label>
-                        <input style="font-size: 24px;" class="form-control" type="number">
+                        <input style="font-size: 24px;" class="form-control" type="number" required>
                         <label style="font-size: 32px;margin-bottom: 15px;" for="">Selecione a data da reserva:</label>
-                        <input style="font-size: 24px;margin-bottom: 15px;" class="form-control" id="reserva" type="date">
+                        <input style="font-size: 24px;margin-bottom: 15px;" class="form-control" id="reserva" type="date" required>
                         <button style="margin: 10px auto;" class="btnr primary-btn" type="submit">Reservar</button>
                     </div>
                 </form>
