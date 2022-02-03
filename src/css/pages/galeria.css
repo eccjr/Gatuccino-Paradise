@@ -1,12 +1,20 @@
 @import url(../reset.css);
 @import url(../global.css);
 
-/* ====================== Galeria */
+/* ====================== Top Section */
+#gallery { padding-bottom: 120px; }
+#gallery header { text-align: center; }
+#gallery .divider-horizontal {
+    margin-left: auto;
+    margin-right: auto;
+}
 
-.grid-container{
+/* ====================== Galeria */
+.grid-container {
     display: flex;
     align-items: center;
 }
+
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -24,10 +32,7 @@
     background-size: cover;
     padding: 8px;
 }
-.image_type1 img{
-    background: linear-gradient(145deg, var(--std-border));
-    padding: 6px;
-}
+
 .image {
     flex-shrink: 0;
     width: 100%;
@@ -36,7 +41,7 @@
     overflow: hidden;
 }
 
-.galery-description{
+.galery-description {
     font-size: 26px;
     font-weight: bold;
     text-transform: uppercase;

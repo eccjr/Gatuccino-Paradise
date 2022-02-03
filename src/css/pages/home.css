@@ -2,30 +2,10 @@
 @import url(../global.css);
 
 /* ========================= Primeira Seção: Sobre o Café */
-.section-frame {
-    width: 100%;
-    padding-top: 120px;
-    background: var(--bege-claro);
-}
-
 /* Coluna de Texto - Conteúdo */
 #first-section .content-col {
     width: 600px;
     margin-right: 1rem;
-}
-
-.content-col .section-caption {
-    font-size: 72px;
-    font-weight: bold;
-    text-transform: capitalize;
-    color: var(--dark-text-color);
-}
-
-.content-col .section-about {
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--dark-text-color);
-    margin-bottom: 50px;
 }
 
 .buttons {
@@ -49,12 +29,6 @@
 /* Hover-Animation */
 #first-section .image-col { transition: transform .4s ease-out; }
 #first-section .image-col:hover { transform: translateY(-2rem); }
-
-/* Border-Hack */
-.border-wrapper {
-    background: linear-gradient(145deg, var(--std-border));
-    padding: 6px;
-}
 
 /* ========================= Segunda Seção: Sobre o Estabelecimento */
 #second-section {

@@ -7,12 +7,32 @@
     text-shadow: var(--basic-text-shadow);
 }
 
+.section-frame {
+    width: 100%;
+    padding-top: 80px;
+    background: var(--bege-claro);
+}
+
 .section-header {
     font-size: 26px;
     font-weight: bold;
     text-transform: uppercase;
     color: var(--bege-escuro);
     margin-bottom: 15px;
+}
+
+.section-caption {
+    font-size: 72px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--dark-text-color);
+}
+
+.section-about {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--dark-text-color);
+    margin-bottom: 50px;
 }
 
 /* =========== Flex Classes */
@@ -67,4 +87,11 @@
 .divider-vertical {
     height: 300px;
     border-left: 2px solid var(--bege-escuro);
+}
+
+/* =========== Utilidades */
+/* Border-Hack */
+.border-wrapper {
+    background: linear-gradient(145deg, var(--std-border));
+    padding: 6px;
 }
