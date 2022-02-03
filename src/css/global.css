@@ -1,21 +1,5 @@
-@import url(colors.css);
-
-:root {
-    /* Tamanhos Variáveis */
-    --width-container-desktop: 1110px;
-    --height-nav-desktop: 100px;
-    font-size: 16px;
-
-    /* Utilidades */
-    --light-text-color: var(--cinza-claro);
-    --dark-text-color: var(--marrom-cafe);
-    --basic-text-shadow: 0 4px 8px rgba(0, 0, 0, .16);
-    --std-border:
-        var(--marrom-cafe) 0%,
-        rgba(255, 255, 255, .8) 25%,
-        rgba(255, 255, 255, .8) 75%,
-        var(--marrom-escuro) 100%;
-}
+@import url(root-preset.css);
+@import url(components.css);
 
 /* ========================= Elementos de Controle da Página */
 body {
@@ -49,4 +33,339 @@ body {
         color: var(--bege-claro);
         background: var(--bege-escuro);
     }
+}
+
+/* ========================= Navbar */
+nav {
+    width: 100%;
+    background: var(--bege-claro);
+}
+
+.navbar_container {
+    max-width: var(--width-container-desktop);
+    height: var(--height-nav-desktop);
+    align-items: center;
+    background: inherit;
+    margin: 0 auto;
+    gap: calc((100% - 400px - 225px - 210px) / 2);
+}
+
+.navbar_container a {
+    color: var(--marrom-escuro);
+    text-decoration: none;
+}
+
+/* navbar_Columns */
+.nav_section {
+    background: inherit;
+    text-shadow: var(--basic-text-shadow);
+}
+
+/* --------> Logo-Brand */
+.navbar_brand {
+    width: 215px;
+    height: 80px;
+    font-size: 26px;
+    font-weight: bold;
+    transition: transform .2s ease-in-out;
+}
+
+.navbar_brand img {
+    width: 80px;
+    height: 80px;
+    object-fit: fill;
+    margin-right: 15px;
+}
+
+.navbar_brand .brand-name {
+    text-align: left;
+    margin-top: 12px;
+    color: var(--cinza-claro);
+    line-height: 32px;
+    
+    /* Provisório */
+    text-shadow:
+        2px 0 0 var(--marrom-cafe),
+        -2px 0 0 var(--marrom-cafe),
+        0 2px 0 var(--marrom-cafe),
+        0 -2px 0 var(--marrom-cafe),
+        1px 1px var(--marrom-cafe),
+        -1px -1px 0 var(--marrom-cafe),
+        1px -1px 0 var(--marrom-cafe),
+        -1px 1px 0 var(--marrom-cafe);
+}
+
+/* Logo Animation */
+.navbar_brand:hover { transform: translateY(-4px); }
+
+/* --------> Seção de Links de Navegação */
+.nav_list {
+    width: 100%;
+    align-items: center;
+}
+
+.navbar_collapse { max-width: 400px; }
+
+/* nav_links */
+.navbar_nav {
+    width: 100%;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_item {
+    width: 100px;
+    text-shadow: var(--basic-text-shadow);
+    text-align: center;
+}
+
+.nav_item .nav_link { padding: 0.6rem 1.5rem; }
+.nav_item .nav_link.active { color: var(--marrom-cafe); }
+
+/* -> Animações nos Elementos da Navbar */
+.nav_item,
+.nav_item .nav_link,
+.nav_tel {
+    transition: all .2s ease-in-out;
+}
+
+/* Hovering Animations */
+.nav_item:hover,
+.nav_item:hover .nav_link,
+.nav_tel:hover {
+    color: var(--marrom-cafe);
+    transform: translateY(-4px);
+}
+
+/* --------> Seção do Telefone */
+.nav_tel {
+    max-width: 225px;
+    padding: 0.6rem 1.5rem;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: var(--basic-text-shadow);
+    align-items: center;
+}
+
+.nav_tel .tel-icon { margin-right: 5px; }
+
+/* --------> Menu Mobile Escondido */
+.mobile-menu {
+    display: none;
+    cursor: url(../utils/cat-pointer.cur), pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--marrom-escuro);
+    margin: 8px;
+    transition: transform .3s ease-in-out;
+}
+
+/* ========== Responsive Rules */
+@media screen and (max-width: 1200px) {
+    .navbar_container { padding: 0 2rem; }
+}
+
+@media screen and (max-width: 999px) {
+    .nav_list {
+        position: absolute;
+        top: var(--height-nav-desktop);
+        right: 0;
+        width: 50vw;
+        height: calc(100vh - var(--height-nav-desktop) * 2.25);
+        background: var(--bege-escuro);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem .5rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        z-index: 100;
+    }
+    
+    .nav_item, .nav_tel { opacity: 0; }
+    .navbar_nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .mobile-menu { display: block; }
+    .nav_list.active { transform: translateX(0); }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .mobile-menu.active .line-01 { transform: rotate(-45deg) translate(-8px, 8px); }
+    .mobile-menu.active .line-02 { opacity: 0; }
+    .mobile-menu.active .line-03 { transform: rotate(45deg) translate(-5px, -7px); }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar_container { --height-nav-desktop: 80px; }
+    .navbar_brand {
+        font-size: 22px;
+        height: 60px;
+    }
+
+    .navbar_brand img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .navbar_brand .brand-name {
+        margin-top: 6px;
+        line-height: 28px;
+    }
+
+    .navbar_nav { font-size: 18px; }
+    .nav_tel {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+    }
+}
+
+/* ========================= Seção Visite */
+#visite {
+    background: var(--marrom-escuro);
+    padding: 140px 0;
+    color: var(--light-text-color);
+}
+
+.visite-col .section-header { text-align: center; }
+.visite-col strong { color: var(--bege-escuro) }
+
+.visite-col .col-content {
+    margin-top: 60px;
+    text-align: left;
+}
+
+.col-text {
+    font-size: 1.375rem;
+    margin-bottom: .5rem;
+}
+
+.visite-col.local { max-width: 400px; }
+.visite-col.local iframe {
+    width: 100%;
+    height: 300px;
+}
+
+.visite-col.atendimento .col-content {
+    text-align: center;
+}
+
+.footer-list {
+    list-style-type: none;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.footer-list li { margin-bottom: 15px; }
+
+.footer-social-media {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.social-media-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50px;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--marrom-cafe);
+    font-size: 40px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform .2s ease;
+}
+
+.social-media-box:hover { transform: scale(1.1); opacity: 0.8; }
+.social-media-box i {
+    display: block;
+    color: black;
+}
+
+/* =============== Footer */
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 1200px) {
+    #visite .section-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .visite-col .col-content { margin-top: 30px; }
+
+    #visite .divider-vertical { display: none; }
+}
+
+/* ========================= Botão Fixo do WhatsApp */
+.fixed-button {
+    position: fixed;
+    right: 2vw;
+    bottom: 4vh;
+    background: white;
+    border-radius: 50%;
+    padding: .5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all .35s ease-in-out;
+}
+
+.fixed-button .button-container {
+    display: block;
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    text-decoration: none;
+}
+
+.fixed-button .button-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    right: 0;
+}
+
+.fixed-button .button-container .cat-icon { margin: auto auto auto -6px; }
+.fixed-button .button-container .wpp-icon {
+    font-size: 1.25rem;
+    color: #0DC143;
+    margin: 8px auto auto 44px;
+}
+
+/* Animation */
+.fixed-button:hover {
+    background: var(--cinza-medio);
+    transform: translateY(-0.8rem);
 }

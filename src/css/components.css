@@ -1,6 +1,20 @@
-@import url(colors.css);
-
 /* ========================= Utilidades */
+/* =========== Section Presets */
+.section-container {
+    max-width: var(--width-container-desktop);
+    background: inherit;
+    margin: 0 auto;
+    text-shadow: var(--basic-text-shadow);
+}
+
+.section-header {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--bege-escuro);
+    margin-bottom: 15px;
+}
+
 /* =========== Flex Classes */
 .flex, .flex-reverse {
     display: flex;
