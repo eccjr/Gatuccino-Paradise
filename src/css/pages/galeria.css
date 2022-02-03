@@ -3,9 +3,16 @@
 @import url(../navbar.css);
 
 /* ====================== Galeria */
+
+.grid-container{
+    display: flex;
+    align-items: center;
+}
 .grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .image_type1 {
@@ -16,10 +23,25 @@
     width: 18vw;
     height: 25vh;
     background-size: cover;
+    padding: 8px;
 }
-
+.image_type1 img{
+    background: linear-gradient(145deg, var(--std-border));
+    padding: 6px;
+}
 .image {
     flex-shrink: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.galery-description{
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--bege-escuro);
+    margin-bottom: 15px;
+    text-align: center;
 }

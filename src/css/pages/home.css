@@ -170,6 +170,21 @@
     color: var(--bege-escuro)
 }
 
+@media (max-width: 768px){
+    #visite .section-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #visite .visite-col{
+        margin-bottom: 100px;
+    }
+    #visite .visite-col:last-child{
+        margin-bottom: 0px;
+    }
+}
+
 /* ========================= Botão Fixo do WhatsApp */
 .fixed-button {
     position: fixed;

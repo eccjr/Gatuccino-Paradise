@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="shortcut icon" href="../../public/logo.png" />
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+
     <!-- Google Material Icons & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
     <title>Adote - Gatuccino Paradise</title>
 </head>
 <body>
-    <div id="content">
+    <div id="app">
         <nav>
             <div class="navbar_container flex">
                 <!-- Primeira Seção: Porção da Logo -->
@@ -62,10 +63,45 @@
                 </div>
             </div>
         </nav>
-    </div>
+        <div class="main-content">
+            <img v-show="gatoAtual == 'Gilberto'" src="../images/cat-gallery/Gilberto.jpeg" class="gatinho" alt="">
+            <img v-show="gatoAtual == 'Ronaldo'" src="../images/cat-gallery/Ronaldo.jpeg" class="gatinho" alt="">
+            <img v-show="gatoAtual == 'Zequinha'" src="../images/cat-gallery/Zequinha.jpeg" class="gatinho" alt="">
+            <img v-show="gatoAtual == 'Paçoca'" src="../images/cat-gallery/Paçoca.jpeg" class="gatinho" alt="">
 
+            <label for="">Selecione seu gatinho!</label>
+            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Gilberto'" value="Gilberto">Gilberto</button>
+            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Ronaldo'" value="Ronaldo">Ronaldo</button>
+            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Zequinha'" value="Zequinha">Zequinha</button>
+            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Paçoca'" value="Paçoca">Paçoca</button>
+            <form action="">
+                <div class="form-group">
+                        <label for="">Qual gatinho você quer adotar?</label>
+                        <input class="form-control" type="text" :value="gatoAtual" disabled="true"></input>
+                    <label for="">Seu nome:</label>
+                    <input class="form-control" type="text">
+                    <label for="">Qual a data da retirada do gatinho?</label>
+                    <input class="form-control" type="date" name="" id="">
+                </div>
+                <button style="margin: 15px auto;" class="btnr primary-btn">Adotar!</button>
+            </form>
+        </div>
+    </div>
     <!-- Project Scripts -->
     <script src="../js/mobileNavbar.js"></script>
-    <script src="../js/getMinDate.js"></script>
+    <script src="../js/getMinDate.js"></script>7
+
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                gatoAtual: "Gilberto",
+            }
+        })
+    </script>
+
 </body>
 </html>
