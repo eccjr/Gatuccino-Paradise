@@ -112,6 +112,7 @@ nav {
     font-size: 18px;
     font-weight: bold;
     text-shadow: var(--basic-text-shadow);
+    align-items: center;
 }
 
 .nav_tel .tel-icon { margin-right: 5px; }
