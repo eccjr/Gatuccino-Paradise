@@ -37,8 +37,10 @@ body {
 
 /* ========================= Navbar */
 nav {
+    position: relative;
     width: 100%;
     background: var(--bege-claro);
+    overflow-x: hidden;
 }
 
 .navbar_container {
