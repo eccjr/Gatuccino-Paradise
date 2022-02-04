@@ -2,23 +2,6 @@
 @import url(components.css);
 
 /* ========================= Elementos de Controle da Página */
-html, body { position: relative; overflow-x: hidden; }
-body {
-    background-color: var(--bege-claro);
-    /* Sobrescrevendo Cursor Padrão */
-    cursor: url("../utils/cat-cursor.cur"), auto;
-}
-
-#content {
-    min-height: 100vh;
-    min-width: 330px;
-    width: 100%;
-}
-
-/* ----> Mobile Menu Effect */
-#content.active section,
-#content.active footer { opacity: .5; }
-
 /* ----> Text Selection Color */
 @supports(-moz-appearance: none) { /* Code for Firefox */
     ::-moz-selection {
@@ -32,7 +15,7 @@ body {
     }
 }
 
-@supports not (-moz-appearance: none) { /* Code for Non-Firefox Browsers */
+@supports not (-moz-appearance: none) { /* Code for Webkit-Based Browsers */
     ::selection {
         color: var(--bege-claro);
         background: var(--bege-escuro);
@@ -45,6 +28,29 @@ body {
         border-radius: 8px;
     }
 }
+
+/* Force Overflow */
+html, body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bege-claro);
+    /* Sobrescrevendo Cursor Padrão */
+    cursor: url("../utils/cat-cursor.cur"), auto;
+}
+
+#content {
+    position: relative; /* Prevents bug on Navbar Menu */
+    min-height: 100vh;
+    min-width: 330px;
+    width: 100%;
+}
+
+/* ----> Mobile Menu Effect */
+#content.active section,
+#content.active footer { opacity: .5; }
 
 /* ========================= Navbar */
 nav {
