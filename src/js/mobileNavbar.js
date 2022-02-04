@@ -17,16 +17,11 @@ class MobileNavbar {
             }s`);
         });
     }
-
-    darkenBackground() {
-        let content = document.querySelector("#content");
-        content.classList.toggle(this.activeClass);
-    }
     
     handleClick() {
         this.navList.classList.toggle(this.activeClass);
         this.mobileMenu.classList.toggle(this.activeClass);
-        this.darkenBackground();
+        content.classList.toggle(this.activeClass);
         this.animateLinks();
     }
     
@@ -42,9 +37,17 @@ class MobileNavbar {
     }
 }
 
+const content = document.getElementById("content");
 const mobileNavbar = new MobileNavbar(
     ".mobile-menu",
     ".nav_list",
     ".nav_item, .nav_tel",
 );
+
+let clickedOutside = content.addEventListener("click", function(evt) {
+    let elem = evt.target.offsetParent;
+    if(content.classList.contains("active") && elem.id === "content")
+        mobileNavbar.handleClick();
+});
+
 mobileNavbar.init();

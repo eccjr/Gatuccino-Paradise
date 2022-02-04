@@ -19,49 +19,50 @@
     <title>Adote - Gatuccino Paradise</title>
 </head>
 <body>
-    <div id="app">
-        <nav>
-            <div class="navbar_container flex">
-                <!-- Primeira Seção: Porção da Logo -->
-                <a href="../../index.html" class="nav_section navbar_brand flex" role="link">
-                    <img src="../../public/logo.png" alt="Logomarca da Cafeteria Gatuccino Paradise." />
-                    <span class="meows-font brand-name">Gatuccino Paradise</span>
+    <nav>
+        <div class="navbar_container flex">
+            <!-- Primeira Seção: Porção da Logo -->
+            <a href="../../index.html" class="nav_section navbar_brand flex" role="link">
+                <img src="../../public/logo.png" alt="Logomarca da Cafeteria Gatuccino Paradise." />
+                <span class="meows-font brand-name">Gatuccino Paradise</span>
+            </a>
+            
+            <div class="nav_list flex">
+                <!-- Segunda Seção: Links de Navegação -->
+                <div class="nav_section navbar_collapse flex">
+                    <ul class="navbar_nav flex">
+                        <li class="nav_item">
+                            <a href="../../index.html" role="link" class="nav_link">Home</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="adote.html" role="link" class="nav_link active">Adote</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="galeria.html" role="link" class="nav_link">Fotos</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#visite" role="link" class="nav_link">Visitas</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Terceira Seção: Telefone -->
+                <a href="tel:+551740028922" role="link" class="nav_section nav_tel flex">
+                    <i class="fas fa-phone tel-icon"></i>
+                    <span class="tel-number">+55 (17) 4002-8922</span>
                 </a>
-                
-                <div class="nav_list flex">
-                    <!-- Segunda Seção: Links de Navegação -->
-                    <div class="nav_section navbar_collapse flex">
-                        <ul class="navbar_nav flex">
-                            <li class="nav_item">
-                                <a href="../../index.html" role="link" class="nav_link">Home</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="adote.html" role="link" class="nav_link active">Adote</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="galeria.html" role="link" class="nav_link">Fotos</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="#visite" role="link" class="nav_link">Visitas</a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Terceira Seção: Telefone -->
-                    <a href="tel:+551740028922" role="link" class="nav_section nav_tel flex">
-                        <i class="fas fa-phone tel-icon"></i>
-                        <span class="tel-number">+55 (17) 4002-8922</span>
-                    </a>
-                </div>
-                
-                <!-- Mobile Menu - Hidden -->
-                <div class="mobile-menu">
-                    <div class="line-01"></div>
-                    <div class="line-02"></div>
-                    <div class="line-03"></div>
-                </div>
             </div>
-        </nav>
+            
+            <!-- Mobile Menu - Hidden -->
+            <div class="mobile-menu">
+                <div class="line-01"></div>
+                <div class="line-02"></div>
+                <div class="line-03"></div>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="app">
         <div class="main-content">
             <img v-show="gatoAtual == 'Gilberto'" src="../images/cat-gallery/Gilberto.jpeg" class="gatinho" alt="">
             <img v-show="gatoAtual == 'Ronaldo'" src="../images/cat-gallery/Ronaldo.jpeg" class="gatinho" alt="">

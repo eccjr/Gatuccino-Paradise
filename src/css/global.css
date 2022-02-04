@@ -166,9 +166,10 @@ nav {
     transition: transform .3s ease-in-out;
 }
 
-/* ========== Responsive Rules */
+/* ========== Navbar Responsive Rules */
 @media screen and (max-width: 1200px) {
-    .navbar_container { padding: 0 2rem; }
+    .navbar_container,
+    .section-container { padding: 0 2rem; }
 }
 
 @media screen and (max-width: 999px) {
@@ -316,6 +317,7 @@ footer {
     color: white;
 }
 
+/* ============ Responsividade da Seção Visite */
 @media screen and (max-width: 1200px) {
     #visite .section-container {
         flex-direction: column;
@@ -364,10 +366,7 @@ footer {
     height: 100%;
     object-fit: cover;
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    right: 0;
+    inset: 0;
 }
 
 .fixed-button .button-container .cat-icon { margin: auto auto auto -6px; }
