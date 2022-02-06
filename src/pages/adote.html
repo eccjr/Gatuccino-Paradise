@@ -64,23 +64,43 @@
     
     <div id="app">
         <div class="main-content">
-            <img v-show="gatoAtual == 'Gilberto'" src="../images/cat-gallery/Gilberto.jpeg" class="gatinho" alt="">
-            <img v-show="gatoAtual == 'Ronaldo'" src="../images/cat-gallery/Ronaldo.jpeg" class="gatinho" alt="">
-            <img v-show="gatoAtual == 'Zequinha'" src="../images/cat-gallery/Zequinha.jpeg" class="gatinho" alt="">
-            <img v-show="gatoAtual == 'Paçoca'" src="../images/cat-gallery/Paçoca.jpeg" class="gatinho" alt="">
-
-            <label for="">Selecione seu gatinho!</label>
-            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Gilberto'" value="Gilberto">Gilberto</button>
-            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Ronaldo'" value="Ronaldo">Ronaldo</button>
-            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Zequinha'" value="Zequinha">Zequinha</button>
-            <button class="btnr primary-btn" style="margin-bottom: 15px;" @click="gatoAtual = 'Paçoca'" value="Paçoca">Paçoca</button>
+            <div v-show="gatoAtual == 'Gilberto'" >
+                <img src="../images/cat-gallery/Gilberto.jpeg" class="gatinho" alt="">
+                <p>Gilberto é um gatinho fuleiro, muito carinhoso e cheio de energia! Tem dois aninhos e ama brincar!</p>
+            </div>
+            <div v-show="gatoAtual == 'Ronaldo'">
+                <img  src="../images/cat-gallery/Ronaldo.jpeg" class="gatinho" alt="">
+                <p>Ronaldo tem um aninho e meio, ama dormir, é bem preguiçoso e gosta de ficar perto de quem ele gosta!</p>
+            </div>
+            <div v-show="gatoAtual == 'Zequinha'">
+                <img  src="../images/cat-gallery/Zequinha.jpeg" class="gatinho" alt="">
+                <p>Zequinha é gente boa igual todo gato laranja, tem um aninho e sete meses, gosta de rolar na grama e ficar ao ar livre!</p>
+            </div>
+            <div v-show="gatoAtual == 'Paçoca'">
+                <img  src="../images/cat-gallery/Paçoca.jpeg" class="gatinho" alt="">
+                <p>paçoca é MALUCO, DOIDO, ele vai te acordar 3h da manhã com um animal não identificado na boca, vai sumir por 2 semanas e voltar com um amigo gambá, vai ter dois donos sem eles nunca saberem e vai ser aviãozinho de cadeia pra aquele seu tio que sonegava imposto.</p>
+            </div>
             <form action="">
                 <div class="form-group">
-                        <label for="">Qual gatinho você quer adotar?</label>
-                        <input class="form-control" type="text" :value="gatoAtual" disabled="true">
-                    <label for="">Seu nome:</label>
+                    <label style="margin: 20px 0 0 0;" for="">Qual gatinho você quer adotar?</label>
+                    <select class="form-control" v-model="gatoAtual" name="" id="">
+                        <option  disabled="true">Escolha um gatinho</option>
+                        <option>
+                            Gilberto
+                        </option>
+                        <option>
+                            Ronaldo
+                        </option>
+                        <option>
+                            Zequinha
+                        </option>
+                        <option>
+                            Paçoca
+                        </option>
+                    </select>
+                    <label style="margin: 20px 0 0 0;" for="">Seu nome:</label>
                     <input class="form-control" type="text" required>
-                    <label for="">Qual a data da retirada do gatinho?</label>
+                    <label style="margin: 20px 0 0 0;" for="">Qual a data da retirada do gatinho?</label>
                     <input class="form-control" type="date" name="" id="" required>
                 </div>
                 <button style="margin: 15px auto;" class="btnr primary-btn">Adotar!</button>
