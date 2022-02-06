@@ -85,16 +85,34 @@
     grid-column-end: 4;
 }
 
+#fourth-section{
+    margin-top: -100px;
+    margin-bottom: -100px;
+}
+
 .carousel-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    
     margin: 10%;
 }
 .section-card{
     margin-left: 5%;
-
+    flex-basis: 33%;
+}
+.card-text{
+    border: 4px solid var(--bege-escuro);
+    background-color: var(--marrom-escuro);
+    color: var(--bege-claro);
+    text-align: center;
+}
+.card-text h2{
+    width: 70%;
+    margin: 0 auto;
+    color: var(--bege-escuro);
+    border-bottom: 2px solid var(--bege-escuro);
 }
 .section-card:first-child{
     margin-left: 0;
