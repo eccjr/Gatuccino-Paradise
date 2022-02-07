@@ -18,6 +18,7 @@
     --dark-text-color: var(--marrom-cafe);
     --basic-text-shadow: 0 4px 8px rgba(0, 0, 0, .16);
     --basic-box-shadow: 4px 2px 6px rgba(0, 0, 0, .16);
+    --std-transition: transform .4s ease;
     --std-border:
         var(--marrom-cafe) 0%,
         rgba(255, 255, 255, .8) 25%,

@@ -27,7 +27,7 @@
 }
 
 /* Hover-Animation */
-#first-section .image-col { transition: transform .4s ease-out; }
+#first-section .image-col { transition: var(--std-transition); }
 #first-section .image-col:hover { transform: translateY(-2rem); }
 
 /* ========================= Segunda Seção: Sobre o Estabelecimento */
@@ -71,6 +71,12 @@
 .grid-item {
     margin: 10px;
     box-shadow: var(--basic-box-shadow);
+    transition: var(--std-transition);
+    cursor: url(../../utils/cat-pointer.cur), pointer;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
 }
 
 .grid-item img {
@@ -120,6 +126,7 @@
 
 #carousel-fourth-section .carousel-control-prev { left: -60px; }
 #carousel-fourth-section .carousel-control-next { right: -60px; }
+#carousel-fourth-section .carousel-inner { overflow: visible; }
 
 .carousel-container {
     justify-content: center;
@@ -131,8 +138,13 @@
 .section-card {
     width: 380px;
     height: 500px;
-    overflow: hidden;
     box-shadow: var(--basic-text-shadow);
+    transition: var(--std-transition);
+    cursor: url(../../utils/cat-pointer.cur), pointer;
+}
+
+.section-card:hover {
+    transform: scale(1.1);
 }
 
 .section-card img {
