@@ -258,7 +258,7 @@ nav {
     }
 }
 
-/* ========================= Seção Visite */
+/* ========================= Footer: Seção Visite */
 #visite {
     padding: 120px 0;
     background: var(--marrom-escuro);
@@ -271,11 +271,19 @@ nav {
     text-align: left;
 }
 
-.col-text:last-of-type { margin-top: 25px; }
+.col-text.redes-sociais { margin-top: 25px; }
 .col-text {
     font-size: 1.375rem;
     margin-bottom: .5rem;
 }
+
+a.col-text:hover { text-decoration: underline; }
+a.col-text {
+    display: block;
+    color: var(--light-text-color);
+    text-decoration: none;
+}
+
 
 .visite-col .section-header { text-align: center; }
 .visite-col strong { color: var(--bege-escuro) }
