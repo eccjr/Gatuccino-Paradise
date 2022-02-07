@@ -17,7 +17,7 @@
 #first-section .image-col {
     max-width: 420px;
     height: 650px;
-    box-shadow: 4px 2px 6px rgba(0, 0, 0, .16);
+    box-shadow: var(--basic-box-shadow);
 }
 
 .image-col .photo {
@@ -37,6 +37,7 @@
     margin-top: -100px;
 }
 
+#second-section .carousel { box-shadow: var(--basic-box-shadow); }
 #second-section .section-caption,
 #second-section .section-about {
     color: var(--light-text-color);
@@ -56,20 +57,24 @@
 /* ========================= Terceira Seção: Nossos Produtos */
 #third-section {
     background: var(--bege-claro);
-    padding: 120px 0;
     margin-top: -50px;
 }
 
-#third-section .section-header { text-align: center; }
+#third-section .section-header,
+#fourth-section header { text-align: center; }
 
 .image-grid {
     display: grid;
     grid: 40% 60% / 40% 35% 25%;
 }
 
-.grid-item { margin: 10px; }
+.grid-item {
+    margin: 10px;
+    box-shadow: var(--basic-box-shadow);
+}
+
 .grid-item img {
-    object-fit:cover;
+    object-fit: cover;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -85,42 +90,83 @@
     grid-column-end: 4;
 }
 
-#fourth-section{
-    margin-top: -100px;
-    margin-bottom: -100px;
+/* ========================= Quarta Seção: Nossos Gatinhos */
+#fourth-section { padding: 120px 0; }
+#fourth-section .section-container { max-width: 1200px; }
+#fourth-section header + .divider-horizontal { margin: 15px auto 35px; }
+
+/* ======= Posicionamento do Background Personalizado */
+#carousel-fourth-section { position: relative; }
+#carousel-fourth-section .semi-background {
+    position: absolute;
+    top: 30px;
+    left: calc((100vw - 1200px) / -2);
+    height: 320px;
+    width: 100vw;
+    background: var(--marrom-escuro);
+    z-index: -1;
 }
 
-.carousel-container{
-    display: flex;
-    flex-direction: row;
+/* ======= Reposicionamento dos Indicadores do Carousel */
+#carousel-fourth-section .carousel-control-prev,
+#carousel-fourth-section .carousel-control-next {
+    top: 6%;
+    bottom: 0;
+    width: 60px;
+    max-height: 320px;
+    color: black;
+    z-index: 1000;
+}
+
+#carousel-fourth-section .carousel-control-prev { left: -60px; }
+#carousel-fourth-section .carousel-control-next { right: -60px; }
+
+.carousel-container {
     justify-content: center;
     align-items: center;
-    
-    margin: 10%;
+    gap: 30px;
 }
-.section-card{
-    margin-left: 5%;
-    flex-basis: 33%;
-}
-.card-text{
-    border: 4px solid var(--bege-escuro);
-    background-color: var(--marrom-escuro);
-    color: var(--bege-claro);
-    text-align: center;
-}
-.card-text h2{
-    width: 70%;
-    margin: 0 auto;
-    color: var(--bege-escuro);
-    border-bottom: 2px solid var(--bege-escuro);
-}
-.section-card:first-child{
-    margin-left: 0;
 
-}
-.section-card img{
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
+/* ======= Estilização dos Cards */
+.section-card {
+    width: 380px;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+    box-shadow: var(--basic-text-shadow);
+}
+
+.section-card img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
+
+.card-text {
+    width: 100%;
+    border: 4px solid #F1D05C;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--marrom-cafe);
+}
+
+.card-text .section-header {
+    color: #F1D05C;
+    font-size: 28px;
+    margin: 0;
+}
+
+.card-text .section-about {
+    color: var(--light-text-color);
+    text-transform: capitalize;
+    font-size: 24px;
+    margin: 0;
+}
+
+.card-text .divider-horizontal {
+    width: 260px;
+    margin: 2px auto 10px;
+    border-color: #F1D05C;
 }
