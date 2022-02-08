@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Conheça a cafeteria mais amada do Brasil! Aproveite seu dia em um local aconchegante junto a nossos gatinhos incríveis e bebidas de tirar o fôlego.">
     
-    <link rel="shortcut icon" href="../../public/logo.png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="../../public/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../public/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../public/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../public/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="../../public/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+    <!-- Bootstrap Import -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.useful.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +56,7 @@
                 </div>
                 
                 <!-- Terceira Seção: Telefone -->
-                <a href="tel:+551740028922" role="link" class="nav_section nav_tel flex">
+                <a href="#0" role="link" class="nav_section nav_tel flex">
                     <i class="fas fa-phone tel-icon"></i>
                     <span class="tel-number">+55 (17) 4002-8922</span>
                 </a>
@@ -65,19 +74,19 @@
     <main id="app">
         <div class="main-content">
             <div v-show="gatoAtual == 'Gilberto'" >
-                <img src="../images/cat-gallery/Gilberto.jpeg" class="gatinho" alt="">
+                <img src="../images/cat-gallery/Gilberto.jpeg" class="gatinho" alt="Foto de nossos gatos disponíveis para adoção. Este é o Gilberto.">
                 <p>Gilberto é um gatinho fuleiro, muito carinhoso e cheio de energia! Tem dois aninhos e ama brincar!</p>
             </div>
             <div v-show="gatoAtual == 'Ronaldo'">
-                <img  src="../images/cat-gallery/Ronaldo.jpeg" class="gatinho" alt="">
+                <img  src="../images/cat-gallery/Ronaldo.jpeg" class="gatinho" alt="Foto de nossos gatos disponíveis para adoção. Este é o Ronaldo.">
                 <p>Ronaldo tem um aninho e meio, ama dormir, é bem preguiçoso e gosta de ficar perto de quem ele gosta!</p>
             </div>
             <div v-show="gatoAtual == 'Zequinha'">
-                <img  src="../images/cat-gallery/Zequinha.jpeg" class="gatinho" alt="">
+                <img  src="../images/cat-gallery/Zequinha.jpeg" class="gatinho" alt="Foto de nossos gatos disponíveis para adoção. Este é o Zequinha.">
                 <p>Zequinha é gente boa igual todo gato laranja, tem um aninho e sete meses, gosta de rolar na grama e ficar ao ar livre!</p>
             </div>
             <div v-show="gatoAtual == 'Paçoca'">
-                <img  src="../images/cat-gallery/Paçoca.jpeg" class="gatinho" alt="">
+                <img  src="../images/cat-gallery/Paçoca.jpeg" class="gatinho" alt="Foto de nossos gatos disponíveis para adoção. Este é o Paçoca.">
                 <p>paçoca é MALUCO, DOIDO, ele vai te acordar 3h da manhã com um animal não identificado na boca, vai sumir por 2 semanas e voltar com um amigo gambá, vai ter dois donos sem eles nunca saberem e vai ser aviãozinho de cadeia pra aquele seu tio que sonegava imposto.</p>
             </div>
             <form action="">
@@ -106,13 +115,14 @@
                 <button style="margin: 15px auto;" class="btnr primary-btn">Adotar!</button>
             </form>
         </div>
+
         <section id="visite">
             <div class="section-container flex">
                 <div class="visite-col local">
                     <h2 class="section-header">Venha nos visitar</h2>
                     <div class="col-content">
                         <p class="col-text"><strong>Endereço:</strong> Avenida dos Gatos, nº169, Bairro Miau - São José do Rio Preto</p>
-                        <iframe class="border-wrapper" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3730.1523117617444!2d-49.36200658545349!3d-20.785125086130865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bc52cef193eee7%3A0xcc4133d50bcf8239!2sInstituto%20de%20Bioci%C3%AAncias%2C%20Letras%20e%20Ci%C3%AAncias%20Exatas%20UNESP!5e0!3m2!1spt-BR!2sbr!4v1643814092991!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe title="Mapa Interativo da Gatuccino Paradise | Google Maps" class="border-wrapper" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3730.1523117617444!2d-49.36200658545349!3d-20.785125086130865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bc52cef193eee7%3A0xcc4133d50bcf8239!2sInstituto%20de%20Bioci%C3%AAncias%2C%20Letras%20e%20Ci%C3%AAncias%20Exatas%20UNESP!5e0!3m2!1spt-BR!2sbr!4v1643814092991!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -138,36 +148,36 @@
                 <div class="visite-col">
                     <h2 class="section-header">Contate-nos</h2>
                     <div class="col-content">
-                        <a class="col-text"><strong>Telefone:</strong> +55 (17) 4002-8922</a>
-                        <a class="col-text"><strong>E-mail:</strong> gato@gatoverde.botao</a>
+                        <a class="col-text" href="#0"><strong>Telefone:</strong> +55 (17) 4002-8922</a>
+                        <a class="col-text" href="#0"><strong>E-mail:</strong> faleconosco@gatoverde.com</a>
                         <p class="col-text redes-sociais"><strong>Nossas Redes Sociais</strong></p>
                         <div class="footer-social-media flex">
-                            <a class="social-media-box" href="#"><i class="fab fa-whatsapp"></i></a>
-                            <a class="social-media-box" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="social-media-box" href="#"><i class="fab fa-facebook"></i></a>
-                            <a class="social-media-box" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="social-media-box" aria-label="Siga-nos no WhatsApp." href="#0"><i class="fab fa-whatsapp"></i></a>
+                            <a class="social-media-box" aria-label="Siga-nos no Instagram." href="#0"><i class="fab fa-instagram"></i></a>
+                            <a class="social-media-box" aria-label="Siga-nos no Facebook." href="#0"><i class="fab fa-facebook"></i></a>
+                            <a class="social-media-box" aria-label="Siga-nos no Twitter." href="#0"><i class="fab fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Footer da Página -->
-        <footer>
-            <span class="text">@Copyright Gatuccino Paradise 2022 | All Rights Reserved | Design made by <a href="https://github.com/eccjr" target="_blank">@eccjr</a>.</span>
-            <div class="footer-social-media flex">
-                <a class="social-media-box" href="#"><i class="fab fa-whatsapp"></i></a>
-                <a class="social-media-box" href="#"><i class="fab fa-instagram"></i></a>
-                <a class="social-media-box" href="#"><i class="fab fa-facebook"></i></a>
-                <a class="social-media-box" href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-        </footer>
     </main>
+
+    <!-- Footer da Página -->
+    <footer>
+        <span class="text">@Copyright Gatuccino Paradise 2022 | All Rights Reserved | Design made by <a href="https://github.com/eccjr" target="_blank">@eccjr</a>.</span>
+        <div class="footer-social-media flex">
+            <a class="social-media-box" aria-label="Siga-nos no WhatsApp." href="#0"><i class="fab fa-whatsapp"></i></a>
+            <a class="social-media-box" aria-label="Siga-nos no Instagram." href="#0"><i class="fab fa-instagram"></i></a>
+            <a class="social-media-box" aria-label="Siga-nos no Facebook." href="#0"><i class="fab fa-facebook"></i></a>
+            <a class="social-media-box" aria-label="Siga-nos no Twitter." href="#0"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
 
     <!-- Botão Fixo do WhatsApp -->
     <div class="fixed-button">
         <a class="button-container" href="https://wa.me/+551740028922" target="_blank">
-            <img src="../images/cat_icon_green.png" class="cat-icon" />
+            <img src="../images/cat_icon_green.png" class="cat-icon" alt="Ícone de um gato, que redireciona para o contato via aplicativo WhatsApp." />
             <i class="fab fa-whatsapp wpp-icon"></i>
         </a>
     </div>

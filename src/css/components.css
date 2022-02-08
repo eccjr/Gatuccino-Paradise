@@ -65,6 +65,7 @@
 
 .secondary-btn {
     background: inherit;
+    text-decoration: underline;
     color: var(--marrom-cafe);
 }
 
