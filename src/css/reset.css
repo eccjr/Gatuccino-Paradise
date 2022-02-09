@@ -19,4 +19,9 @@
 a:hover { color: inherit; }
 
 /* Pointer Custom Cursor */
-a, button, [role="button"] { cursor: url("../utils/cat-pointer.cur"), pointer !important; }
+a,
+button,
+[role="button"],
+select,
+label,
+input { cursor: url("../utils/cat-pointer.cur"), pointer !important; }

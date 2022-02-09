@@ -77,6 +77,143 @@
     transform: translateY(-6px);
 }
 
+/* =========== Form Components */
+.modal-content .divider-horizontal {
+    width: 60%;
+}
+
+.frm-content {
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+    .frm-content fieldset {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+        fieldset legend {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+        }
+
+            fieldset legend i { font-size: .8rem; vertical-align: middle; }
+
+        .frm-content fieldset label {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: .5rem;
+            font-size: 1.1rem;
+            gap: .3rem;
+        }
+
+            .frm-content label .frm-input {
+                width: calc(100% - 0.5rem);
+                padding: .4rem .6rem;
+                border-radius: .3rem;
+                font-size: 1rem;
+                transition: all .35s;
+            }
+
+            .frm-input:valid { border: 1px solid #48D97A; }
+            .frm-input:invalid { border: 1px solid tomato; }
+            .frm-input:focus {
+                outline: none;
+                border: 1px solid #140028;
+            }
+
+            /* ========== Validation Label */
+            .is-invalid, .is-wednesday {
+                max-height: 1rem;
+                font-size: .8rem;
+                color: tomato;
+                text-shadow: 0 0 8px rgba(0, 0, 0, .4);
+                font-weight: bold;
+                transition: all .35s;
+                opacity: 1;
+            }
+
+            .frm-input:valid ~ .is-invalid,
+            .is-wednesday.inactive {
+                max-height: 0;
+                opacity: 0;
+            }
+
+            /* ========== Validation Icons */
+            .validation-icons i {
+                position: absolute;
+                top: 2.35rem;
+                right: 1rem;
+                opacity: 0;
+                transition: all .35s;
+            }
+
+                .frm-input:valid ~ .validation-icons .fa-check {
+                    opacity: 1;
+                    color: #48D97A;
+                }
+
+                .frm-input:invalid ~ .validation-icons .fa-xmark {
+                    opacity: 1;
+                    color: tomato;
+                }
+
+        label[for="ipt-hours"] .inputs-block {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 1rem;
+        }
+
+        .inputs-block .time-block {
+            max-width: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: .25rem;
+        }
+
+            .time-block .frm-input::-webkit-outer-spin-button,
+            .time-block .frm-input::-webkit-inner-spin-button {
+                /* display: none; <- Crashes Chrome on hover */
+                -webkit-appearance: none;
+                margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+            }
+
+            .time-block .frm-input[type=number] {
+                -moz-appearance:textfield; /* Firefox */
+            }
+
+        .frm-btn {
+            align-self: center;
+            transition:
+                opacity .4s ease,
+                box-shadow .4s ease,
+                transform .4s ease
+            ;
+        }
+
+        .frm-btn:hover {
+            opacity: .9;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, .4);
+            transform: translateY(-4px);
+        }
+
 /* =========== Divisores */
 .divider-horizontal {
     width: 300px;
