@@ -6,7 +6,7 @@ var testDateTime = true;
 
 function validateForm(e) {
 	if(!testRegexes() && !testDateTime) {
-		let successMsg = `Thank you for signing up, ${username.value}!`;
+		let successMsg = `Obrigado por realizar sua reserva, ${username.value}!`;
 		alert(successMsg);
 	} else e.preventDefault();
 }
