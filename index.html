@@ -375,37 +375,135 @@
     </div>
     
     <!-- Form Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="exampleModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title section-caption" id="exampleModalLabel">Reserva</h2>
-                </div>
+                <header>
+                    <h2 class="section-caption" id="exampleModalLabel">Reserva</h2>
+                </header>
+                <div class="divider-horizontal"></div>
                 <div class="modal-body">
-                    <form action="">
-                        <div class="form-group">
-                            <!-- eu fiz isso, me condenem mas tava com preguiça -->
-                            <label style="font-size: 32px;margin-bottom: 15px;" for="">Nome:</label>
-                            <input style="font-size: 24px;" class="form-control" type="text" required>
-                            <label style="font-size: 32px;margin-bottom: 15px;" for="">Número de pessoas:</label>
-                            <input style="font-size: 24px;" class="form-control" type="number" required>
-                            <label style="font-size: 32px;margin-bottom: 15px;" for="">Selecione a data da reserva:</label>
-                            <input style="font-size: 24px;margin-bottom: 15px;" class="form-control" id="reserva" type="date" required>
-                            <button style="margin: 10px auto;" class="btnr primary-btn" type="submit">Reservar</button>
+                    <form id="sign-up" action="">
+                        <div class="frm-content">
+                            <fieldset class="field-personal-info">
+                                <legend>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span class="field-header">Personal Information</span>
+                                </legend>
+            
+                                <label for="ipt-fullname">
+                                    <div class="lbl-caption">
+                                        <i class="fa-solid fa-user"></i>
+                                        <span class="ipt-label">Your Full Name</span>
+                                    </div>
+                                    <input id="ipt-fullname" class="frm-input" type="text" pattern="[^0-9]*" placeholder="Eg.: Jason Derulo" required />
+                                    <div class="is-invalid">Provide a valid name (no numbers).</div>
+                                    <div class="validation-icons">
+                                        <i class="fa-solid fa-check"></i>
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                </label>
+                                <label for="ipt-email">
+                                    <div class="lbl-caption">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <span class="ipt-label">Email Address</span>
+                                    </div>
+                                    <input id="ipt-email" class="frm-input" type="email" placeholder="Eg.: jasonderulo@mail.com" required />
+                                    <div class="is-invalid">Provide a valid email.</div>
+                                    <div class="validation-icons">
+                                        <i class="fa-solid fa-check"></i>
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                </label>
+                                <label for="ipt-phone">
+                                    <div class="lbl-caption">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <span class="ipt-label">Phone Number</span>
+                                    </div>
+                                    <input id="ipt-phone" class="frm-input" type="tel" pattern=".{0}|.{14,15}" placeholder="Eg.: (12) 4002-8922 or (12) 40028-9223" required />
+                                    <div class="is-invalid">Provide a valid phone number.</div>
+                                    <div class="validation-icons">
+                                        <i class="fa-solid fa-check"></i>
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                </label>
+                            </fieldset>
+            
+                            <fieldset class="field-reservation">
+                                <legend>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span class="field-header">Reservation Information</span>
+                                </legend>
+            
+                                <label for="ipt-date">
+                                    <div class="lbl-caption">
+                                        <i class="fa-regular fa-calendar-check"></i>
+                                        <span class="ipt-label">Reservation Date (except Wednesdays)</span>
+                                    </div>
+                                    <input id="ipt-date" class="frm-input" type="date" required />
+                                    <div class="is-invalid">This field is required.</div>
+                                    <div class="is-wednesday inactive">We are closed at Wednesdays.</div>
+                                </label>
+                                <label for="ipt-hours">
+                                    <div class="lbl-caption">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span class="ipt-label">Reservation Time</span>
+                                    </div>
+                                    <div class="inputs-block">
+                                        <div class="time-block">
+                                            <input id="ipt-hours" class="frm-input" type="number" min="08" max="17" placeholder="Hours" pattern="[0-9]*" required />
+                                            <span class="time-label">h</span>
+                                        </div>
+                                        <div class="time-block">
+                                            <input id="ipt-minutes" class="frm-input" type="number" min="00" max="55" step="5" placeholder="Minutes" pattern="[0-9]*" required />
+                                            <span class="time-label">min</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label for="ipt-people">
+                                    <div class="lbl-caption">
+                                        <i class="fa-solid fa-person"></i>
+                                        <span class="ipt-label">How Many Guests?</span>
+                                    </div>
+                                    <select id="ipt-people" class="frm-input" type="text" maxlength="" placeholder="Number of guests" required>
+                                        <option value="01">01 Guest</option>
+                                        <option value="02">02 Guests</option>
+                                        <option value="03">03 Guests</option>
+                                        <option value="04">04 Guests</option>
+                                        <option value="05">05 Guests</option>
+                                        <option value="06">06 Guests</option>
+                                        <option value="07">07 Guests</option>
+                                        <option value="08">08 Guests</option>
+                                        <option value="09">09 Guests</option>
+                                        <option value="10">10 Guests</option>
+                                    </select>
+                                </label>
+                            </fieldset>
+            
+                            <button class="primary-btn frm-btn" role="button" type="submit">Submit Reservation</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+        <div id="validationComplete" class="animation-block">
+            <div class="animation">
+                <div class="animation-item rotating-dash"></div>
+                <div class="animation-item back-circle"></div>
+                <div class="animation-item flying-cat"></div>
+            </div>
+            <div class="animation-caption">Reserva Feita com Sucesso!</div>
+        </div>
     </div>
     
     
     <!-- Project Scripts -->
+    <script src="src/js/form-validation/vanilla-masker.min.js"></script>
     <script src="src/js/mobileNavbar.js"></script>
-    <script src="src/js/getMinDate.js"></script>
+    <script type="module" src="src/js/main.js"></script>
     
     <!-- Imported Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/349d46b761.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e9d504f8e2.js" crossorigin="anonymous"></script>
 </body>
 </html>

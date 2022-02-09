@@ -13,10 +13,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../public/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../public/favicons/favicon-16x16.png">
     <link rel="mask-icon" href="../../public/favicons/safari-pinned-tab.svg" color="#5bbad5">
-
+    
     <!-- Bootstrap Import -->
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.useful.css">
-
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,51 +71,121 @@
         </div>
     </nav>
     
-    <main id="app">
-        <div class="main-content">
-            <div v-show="gatoAtual == 'Gilberto'" >
-                <img src="../images/cat-gallery/Gilberto.png" class="gatinho" alt="Foto de nossos gatos disponíveis para adoção. Este é o Gilberto.">
-                <p>Gilberto é um gatinho fuleiro, muito carinhoso e cheio de energia! Tem dois aninhos e ama brincar!</p>
-            </div>
-            <div v-show="gatoAtual == 'Ronaldo'">
-                <img  src="../images/cat-gallery/Ronaldo.png" class="gatinho" alt="Foto de nossos gatos disponíveis para adoção. Este é o Ronaldo.">
-                <p>Ronaldo tem um aninho e meio, ama dormir, é bem preguiçoso e gosta de ficar perto de quem ele gosta!</p>
-            </div>
-            <div v-show="gatoAtual == 'Zequinha'">
-                <img  src="../images/cat-gallery/Zequinha.png" class="gatinho" alt="Foto de nossos gatos disponíveis para adoção. Este é o Zequinha.">
-                <p>Zequinha é gente boa igual todo gato laranja, tem um aninho e sete meses, gosta de rolar na grama e ficar ao ar livre!</p>
-            </div>
-            <div v-show="gatoAtual == 'Paçoca'">
-                <img  src="../images/cat-gallery/Paçoca.png" class="gatinho" alt="Foto de nossos gatos disponíveis para adoção. Este é o Paçoca.">
-                <p>paçoca é MALUCO, DOIDO, ele vai te acordar 3h da manhã com um animal não identificado na boca, vai sumir por 2 semanas e voltar com um amigo gambá, vai ter dois donos sem eles nunca saberem e vai ser aviãozinho de cadeia pra aquele seu tio que sonegava imposto.</p>
-            </div>
-            <form action="">
-                <div class="form-group">
-                    <label style="margin: 20px 0 0 0;" for="">Qual gatinho você quer adotar?</label>
-                    <select class="form-control" v-model="gatoAtual" name="" id="">
-                        <option  disabled="true">Escolha um gatinho</option>
-                        <option>
-                            Gilberto
-                        </option>
-                        <option>
-                            Ronaldo
-                        </option>
-                        <option>
-                            Zequinha
-                        </option>
-                        <option>
-                            Paçoca
-                        </option>
-                    </select>
-                    <label style="margin: 20px 0 0 0;" for="">Seu nome:</label>
-                    <input class="form-control" type="text" required>
-                    <label style="margin: 20px 0 0 0;" for="">Qual a data da retirada do gatinho?</label>
-                    <input class="form-control" type="date" name="" id="" required>
-                </div>
-                <button style="margin: 15px auto;" class="btnr primary-btn">Adotar!</button>
-            </form>
-        </div>
+    <main>
+        <section id="app" class="section-frame">
+            <div class="section-container flex">
+                <header>
+                    <!-- Título de Seção -->
+                    <h1 class="section-header">Adote Nossos Gatinhos</h1>
+                    <!-- Título do Blog -->
+                    <h2 class="section-caption">Formulário de Adoção</h2>
+                </header>
 
+                <div class="divider-horizontal"></div>
+
+                <div class="slideshow-container flex">
+                    <div class="slideshow-item flex" v-show="gatoAtual == 'Gilberto'" >
+                        <img src="../images/cat-gallery/Gilberto.png" class="border-wrapper" alt="Foto de nossos gatos disponíveis para adoção. Este é o Gilberto.">
+                        <div class="divider-horizontal"></div>
+                        <p class="section-about">Gilberto é um gatinho fuleiro, muito carinhoso e cheio de energia! Tem dois aninhos e ama brincar!</p>
+                    </div>
+                    <div class="slideshow-item flex" v-show="gatoAtual == 'Ronaldo'">
+                        <img  src="../images/cat-gallery/Ronaldo.png" class="border-wrapper" alt="Foto de nossos gatos disponíveis para adoção. Este é o Ronaldo.">
+                        <div class="divider-horizontal"></div>
+                        <p class="section-about">Ronaldo tem um aninho e meio, ama dormir, é bem preguiçoso e gosta de ficar perto de quem ele gosta!</p>
+                    </div>
+                    <div class="slideshow-item flex" v-show="gatoAtual == 'Zequinha'">
+                        <img  src="../images/cat-gallery/Zequinha.png" class="border-wrapper" alt="Foto de nossos gatos disponíveis para adoção. Este é o Zequinha.">
+                        <div class="divider-horizontal"></div>
+                        <p class="section-about">Zequinha é gente boa igual todo gato laranja, tem um aninho e sete meses, gosta de rolar na grama e ficar ao ar livre!</p>
+                    </div>
+                    <div class="slideshow-item flex" v-show="gatoAtual == 'Paçoca'">
+                        <img  src="../images/cat-gallery/Paçoca.png" class="border-wrapper" alt="Foto de nossos gatos disponíveis para adoção. Este é o Paçoca.">
+                        <div class="divider-horizontal"></div>
+                        <p class="section-about">Paçoca é MALUCO, DOIDO. Ele vai te acordar 3h da manhã com um animal não identificado na boca. Vai sumir por 2 semanas e voltar com um amigo gambá. Vai ter dois donos sem eles nunca saberem e vai ser aviãozinho de cadeia pra aquele seu tio que sonegava imposto.</p>
+                    </div>
+                </div>
+                <form id="adoption" action="">
+                    <div class="frm-content">
+                        <label for="ipt-cats">
+                            <div class="lbl-caption">
+                                <i class="fa-solid fa-person"></i>
+                                <span class="ipt-label">Qual gatinho você quer adotar?</span>
+                            </div>
+                            <select id="ipt-cats" class="frm-input" v-model="gatoAtual" type="text" placeholder="Escolha um gatinho" required>
+                                <option>Gilberto</option>
+                                <option>Ronaldo</option>
+                                <option>Zequinha</option>
+                                <option>Paçoca</option>
+                            </select>
+                        </label>
+
+                        <fieldset class="field-personal-info">
+                            <legend>
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span class="field-header">Personal Information</span>
+                            </legend>
+        
+                            <label for="ipt-fullname">
+                                <div class="lbl-caption">
+                                    <i class="fa-solid fa-user"></i>
+                                    <span class="ipt-label">Your Full Name</span>
+                                </div>
+                                <input id="ipt-fullname" class="frm-input" type="text" pattern="[^0-9]*" placeholder="Eg.: Jason Derulo" required />
+                                <div class="is-invalid">Provide a valid name (no numbers).</div>
+                                <div class="validation-icons">
+                                    <i class="fa-solid fa-check"></i>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </label>
+                            <label for="ipt-email">
+                                <div class="lbl-caption">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span class="ipt-label">Email Address</span>
+                                </div>
+                                <input id="ipt-email" class="frm-input" type="email" placeholder="Eg.: jasonderulo@mail.com" required />
+                                <div class="is-invalid">Provide a valid email.</div>
+                                <div class="validation-icons">
+                                    <i class="fa-solid fa-check"></i>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </label>
+                            <label for="ipt-phone">
+                                <div class="lbl-caption">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span class="ipt-label">Phone Number</span>
+                                </div>
+                                <input id="ipt-phone" class="frm-input" type="tel" pattern=".{0}|.{14,15}" placeholder="Eg.: (12) 4002-8922 or (12) 40028-9223" required />
+                                <div class="is-invalid">Provide a valid phone number.</div>
+                                <div class="validation-icons">
+                                    <i class="fa-solid fa-check"></i>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="field-reservation">
+                            <legend>
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span class="field-header">Reservation Information</span>
+                            </legend>
+        
+                            <label for="ipt-date">
+                                <div class="lbl-caption">
+                                    <i class="fa-regular fa-calendar-check"></i>
+                                    <span class="ipt-label">Reservation Date (except Wednesdays)</span>
+                                </div>
+                                <input id="ipt-date" class="frm-input" type="date" required />
+                                <div class="is-invalid">This field is required.</div>
+                                <div class="is-wednesday inactive">We are closed at Wednesdays.</div>
+                            </label>
+                        </fieldset>
+                    </div>
+                    <button style="margin: 15px auto;" class="btnr primary-btn">Adotar!</button>
+                </form>
+            </div>
+        </section>
+        
         <section id="visite">
             <div class="section-container flex">
                 <div class="visite-col local">
@@ -125,9 +195,9 @@
                         <iframe title="Mapa Interativo da Gatuccino Paradise | Google Maps" class="border-wrapper" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3730.1523117617444!2d-49.36200658545349!3d-20.785125086130865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bc52cef193eee7%3A0xcc4133d50bcf8239!2sInstituto%20de%20Bioci%C3%AAncias%2C%20Letras%20e%20Ci%C3%AAncias%20Exatas%20UNESP!5e0!3m2!1spt-BR!2sbr!4v1643814092991!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-
+                
                 <div class="divider-vertical"></div>
-
+                
                 <div class="visite-col atendimento">
                     <h2 class="section-header">Atendimento</h2>
                     <div class="col-content">
@@ -142,9 +212,9 @@
                         </ul>
                     </div>
                 </div>
-
+                
                 <div class="divider-vertical"></div>
-
+                
                 <div class="visite-col">
                     <h2 class="section-header">Contate-nos</h2>
                     <div class="col-content">
@@ -162,7 +232,7 @@
             </div>
         </section>
     </main>
-
+    
     <!-- Footer da Página -->
     <footer>
         <span class="text">@Copyright Gatuccino Paradise 2022 | All Rights Reserved | Design made by <a href="https://github.com/eccjr" target="_blank">@eccjr</a>.</span>
@@ -173,7 +243,7 @@
             <a class="social-media-box" aria-label="Siga-nos no Twitter." href="#0"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
-
+    
     <!-- Botão Fixo do WhatsApp -->
     <div class="fixed-button">
         <a class="button-container" href="https://wa.me/+551740028922" target="_blank">
@@ -181,15 +251,16 @@
             <i class="fab fa-whatsapp wpp-icon"></i>
         </a>
     </div>
-
+    
     <!-- Project Scripts -->
     <script src="../js/mobileNavbar.js"></script>
-    <script src="../js/getMinDate.js"></script>
-
+    <script src="../js/form-validation/vanilla-masker.min.js"></script>
+    <script type="module" src="../js/adote.js"></script>
+    
     <!-- Vue JS & Imported Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="https://kit.fontawesome.com/349d46b761.js" crossorigin="anonymous"></script>
-
+    <script src="https://kit.fontawesome.com/e9d504f8e2.js" crossorigin="anonymous"></script>
+    
     <script>
         new Vue({
             el: '#app',

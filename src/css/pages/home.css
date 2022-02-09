@@ -180,3 +180,21 @@
                         font-size: 24px;
                         margin: 0;
                     }
+
+/* ======================= Modal Styling */
+.modal-dialog { max-width: 500px; }
+
+.modal-content {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1rem;
+}
+
+    .modal-content .section-caption {
+        font-size: 3rem;
+    }
+
+    .modal-body {
+        padding: 1rem 0;
+        width: 90%;
+    }
