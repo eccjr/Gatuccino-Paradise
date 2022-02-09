@@ -30,6 +30,43 @@
     #first-section .image-col { transition: var(--std-transition); }
     #first-section .image-col:hover { transform: translateY(-2rem); }
 
+@media screen and (max-width: 1000px) {
+    #first-section .flex.content-container,
+    #first-section .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-caption { font-size: 3rem; }
+    .section-header { font-size: 2rem; }
+
+    .section-caption,
+    .section-header { text-align: center; }
+
+    #first-section .image-col { height: 350px; }
+    
+    .content-col { margin-bottom: 2rem; width: 80% !important; }
+    .content-col .divider-horizontal { margin: 15px auto 35px; }
+
+    #second-section .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #second-section .btnr { margin: 0 auto; }
+
+    #second-section .image-col {
+        max-width: 400px !important;
+        width: 400px !important;
+        height: 500px !important;
+    }
+
+    #carousel-fourth-section .carousel-container { flex-direction: column; }
+    #carousel-fourth-section .semi-background { left: -32px !important; }
+    #carousel-fourth-section .carousel-control-next { right: 70px !important; }
+    #carousel-fourth-section .carousel-control-prev { left: 70px !important; }
+}
+
 /* ========================= Segunda Seção: Sobre o Estabelecimento */
 #second-section {
     background: var(--marrom-escuro);
