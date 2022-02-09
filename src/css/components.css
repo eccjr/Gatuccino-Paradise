@@ -233,3 +233,127 @@
     background: linear-gradient(145deg, var(--std-border));
     padding: 6px;
 }
+
+/* Reservation Animation */
+.animation-block {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    inset: 0;
+    margin: 30% auto;
+    opacity: 0;
+    max-height: 0;
+
+    transition:
+        opacity .2s ease-in-out,
+        max-height .2s ease-in-out
+    ;
+}
+
+.animation-block.active {
+    max-height: none;
+    opacity: 1;
+}
+
+    .animation {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .animation-caption {
+        width: 80%;
+        font-weight: bold;
+        font-size: 1.8rem;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 4px 6px rgba(0,0,0,.8);
+        margin-top: 1.5rem;
+    }
+
+        .rotating-dash {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 16px green solid;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            /* animation: rotatingDash 1s ease-in 0s 1 reverse; */
+        }
+
+            .rotating-dash::before,
+            .rotating-dash::after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: green;
+                border-radius: 50%;
+            }
+
+            .rotating-dash::before {
+                bottom: 0;
+                right: 12px;
+                box-shadow: 
+                    0 0 0 12px #acff2f99,
+                    0 0 0 24px #acff2f66,
+                    0 0 0 36px #acff2f33,
+                    0 0 50px #acff2f
+                ;
+            }
+
+            .rotating-dash::after {
+                width: 20px;
+                height: 20px;
+                top: 8px;
+                left: 12px;
+            }
+
+        .back-circle {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: greenyellow;
+            border-radius: 50%;
+            /* animation: backCircle 1s ease-out 25ms 1 normal forwards; */
+        }
+
+        .flying-cat {
+            position: absolute;
+            top: 25px;
+            width: 125px;
+            height: 125px;
+            background: url(../images/cat-head.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* animation: flyingCat 1s ease-out 50ms 1 normal forwards; */
+        }
+
+        /* User Keyframes */
+        @keyframes rotatingDash {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes backCircle {
+            from { transform: scale(0.5); }
+            to { transform: scale(1); }
+        }
+
+        @keyframes flyingCat {
+            from {
+                opacity: 0;
+                transform: rotate(-540deg) scale(0);
+            }
+            
+            to {
+                opacity: 1;
+                transform: rotate(0) scale(1);
+            }
+        }
