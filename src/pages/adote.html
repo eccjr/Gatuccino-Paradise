@@ -123,16 +123,16 @@
                         <fieldset class="field-personal-info">
                             <legend>
                                 <i class="fa-solid fa-circle-info"></i>
-                                <span class="field-header">Personal Information</span>
+                                <span class="field-header">Informações pessoais</span>
                             </legend>
         
                             <label for="ipt-fullname">
                                 <div class="lbl-caption">
                                     <i class="fa-solid fa-user"></i>
-                                    <span class="ipt-label">Your Full Name</span>
+                                    <span class="ipt-label">Nome completo</span>
                                 </div>
-                                <input id="ipt-fullname" class="frm-input" type="text" pattern="[^0-9]*" placeholder="Eg.: Jason Derulo" required />
-                                <div class="is-invalid">Provide a valid name (no numbers).</div>
+                                <input id="ipt-fullname" class="frm-input" type="text" pattern="[^0-9]*" placeholder="Ex.: Thales Rosa" required />
+                                <div class="is-invalid">Insira um nome válido (Sem nenhum número).</div>
                                 <div class="validation-icons">
                                     <i class="fa-solid fa-check"></i>
                                     <i class="fa-solid fa-xmark"></i>
@@ -141,10 +141,10 @@
                             <label for="ipt-email">
                                 <div class="lbl-caption">
                                     <i class="fa-solid fa-envelope"></i>
-                                    <span class="ipt-label">Email Address</span>
+                                    <span class="ipt-label">Endereço de e-mail</span>
                                 </div>
-                                <input id="ipt-email" class="frm-input" type="email" placeholder="Eg.: jasonderulo@mail.com" required />
-                                <div class="is-invalid">Provide a valid email.</div>
+                                <input id="ipt-email" class="frm-input" type="email" placeholder="Eg.: thalesrosa@mail.com" required />
+                                <div class="is-invalid">Insira um e-mail válido.Insira um e-mail válido.</div>
                                 <div class="validation-icons">
                                     <i class="fa-solid fa-check"></i>
                                     <i class="fa-solid fa-xmark"></i>
@@ -153,10 +153,10 @@
                             <label for="ipt-phone">
                                 <div class="lbl-caption">
                                     <i class="fa-solid fa-phone"></i>
-                                    <span class="ipt-label">Phone Number</span>
+                                    <span class="ipt-label">Número de telefone</span>
                                 </div>
                                 <input id="ipt-phone" class="frm-input" type="tel" pattern=".{0}|.{14,15}" placeholder="Eg.: (12) 4002-8922 or (12) 40028-9223" required />
-                                <div class="is-invalid">Provide a valid phone number.</div>
+                                <div class="is-invalid">Insira um número válido.</div>
                                 <div class="validation-icons">
                                     <i class="fa-solid fa-check"></i>
                                     <i class="fa-solid fa-xmark"></i>
@@ -167,17 +167,17 @@
                         <fieldset class="field-reservation">
                             <legend>
                                 <i class="fa-solid fa-circle-info"></i>
-                                <span class="field-header">Reservation Information</span>
+                                <span class="field-header">Informaçôes da reserva</span>
                             </legend>
         
                             <label for="ipt-date">
                                 <div class="lbl-caption">
                                     <i class="fa-regular fa-calendar-check"></i>
-                                    <span class="ipt-label">Reservation Date (except Wednesdays)</span>
+                                    <span class="ipt-label">Data da reserva (exceto quartas-feiras)</span>
                                 </div>
                                 <input id="ipt-date" class="frm-input" type="date" required />
-                                <div class="is-invalid">This field is required.</div>
-                                <div class="is-wednesday inactive">We are closed at Wednesdays.</div>
+                                <div class="is-invalid">Este campo é obrigatório.</div>
+                                <div class="is-wednesday inactive">Não abrimos às quartas-feiras.</div>
                             </label>
                         </fieldset>
                     </div>
