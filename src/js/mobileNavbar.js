@@ -37,7 +37,7 @@ class MobileNavbar {
     }
 }
 
-const content = document.getElementById("app");
+const content = document.getElementById("content");
 const mobileNavbar = new MobileNavbar(
     ".mobile-menu",
     ".nav_list",
