@@ -35,6 +35,17 @@
     margin-bottom: 50px;
 }
 
+@media screen and (max-width: 1000px) {
+    .section-header { font-size: 1.5rem; }
+    .section-caption { font-size: 3rem; }
+
+    .section-header,
+    .section-caption,
+    .section-about { text-align: center; }
+}
+
+@media screen and (max-width: 550px) { .section-caption { line-height: 1.2; } }
+
 /* =========== Flex Classes */
 .flex, .flex-reverse {
     display: flex;
@@ -202,9 +213,9 @@
         .frm-btn {
             align-self: center;
             transition:
-                opacity .4s ease,
-                box-shadow .4s ease,
-                transform .4s ease
+                opacity var(--std-transition),
+                box-shadow var(--std-transition),
+                transform var(--std-transition)
             ;
         }
 
@@ -216,7 +227,7 @@
 
 /* =========== Divisores */
 .divider-horizontal {
-    width: 300px;
+    width: 40%;
     border-top: 2px solid var(--bege-escuro);
     margin-top: 15px;
     margin-bottom: 35px;

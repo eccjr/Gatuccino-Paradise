@@ -5,7 +5,7 @@
 /* Coluna de Texto - Conteúdo */
 #first-section .content-col {
     width: 600px;
-    margin-right: 1rem;
+    margin-right: 40px;
 }
 
 .buttons {
@@ -27,45 +27,8 @@
     }
 
     /* Hover-Animation */
-    #first-section .image-col { transition: var(--std-transition); }
+    #first-section .image-col { transition: transform var(--std-transition); }
     #first-section .image-col:hover { transform: translateY(-2rem); }
-
-@media screen and (max-width: 1000px) {
-    #first-section .flex.content-container,
-    #first-section .buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .section-caption { font-size: 3rem; }
-    .section-header { font-size: 2rem; }
-
-    .section-caption,
-    .section-header { text-align: center; }
-
-    #first-section .image-col { height: 350px; }
-    
-    .content-col { margin-bottom: 2rem; width: 80% !important; }
-    .content-col .divider-horizontal { margin: 15px auto 35px; }
-
-    #second-section .content-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #second-section .btnr { margin: 0 auto; }
-
-    #second-section .image-col {
-        max-width: 400px !important;
-        width: 400px !important;
-        height: 500px !important;
-    }
-
-    #carousel-fourth-section .carousel-container { flex-direction: column; }
-    #carousel-fourth-section .semi-background { left: -32px !important; }
-    #carousel-fourth-section .carousel-control-next { right: 70px !important; }
-    #carousel-fourth-section .carousel-control-prev { left: 70px !important; }
-}
 
 /* ========================= Segunda Seção: Sobre o Estabelecimento */
 #second-section {
@@ -78,7 +41,7 @@
 
 #second-section .content-col {
     max-width: 520px;
-    margin-left: 15px;
+    margin-left: 40px;
 }
 
     #second-section .section-caption,
@@ -88,7 +51,7 @@
 
 #second-section .image-col {
     max-width: 500px;
-    width: 500px;
+    width: 100%;
     height: 650px;
 }
 
@@ -109,7 +72,7 @@
     .grid-item {
         margin: 10px;
         box-shadow: var(--basic-box-shadow);
-        transition: var(--std-transition);
+        transition: transform var(--std-transition);
         cursor: url(../../utils/cat-pointer.cur), pointer;
     }
     
@@ -135,7 +98,10 @@
 /* ========================= Quarta Seção: Nossos Gatinhos */
 #fourth-section { padding: 120px 0; }
 
-#fourth-section .section-container { max-width: 1200px; }
+#fourth-section .section-container {
+    max-width: 1200px;
+    padding: 0 2.2rem;
+}
 
 #fourth-section header + .divider-horizontal { margin: 15px auto 35px; }
 
@@ -144,7 +110,7 @@
 #carousel-fourth-section .semi-background {
     position: absolute;
     top: 30px;
-    left: calc((100vw - 1200px) / -2);
+    left: calc((100vw - 100%) / -2);
     height: 320px;
     width: 100vw;
     background: var(--marrom-escuro);
@@ -154,16 +120,17 @@
     /* ======= Reposicionamento dos Indicadores do Carousel */
     #carousel-fourth-section .carousel-control-prev,
     #carousel-fourth-section .carousel-control-next {
-        top: 6%;
+        margin-top: 4%;
+        top: 0;
         bottom: 0;
-        width: 60px;
+        width: 5%;
         max-height: 320px;
         color: black;
         z-index: 1000;
     }
 
-    #carousel-fourth-section .carousel-control-prev { left: -60px; }
-    #carousel-fourth-section .carousel-control-next { right: -60px; }
+    #carousel-fourth-section .carousel-control-prev { left: -5%; }
+    #carousel-fourth-section .carousel-control-next { right: -5%; }
 
     #carousel-fourth-section .carousel-inner { overflow: visible; }
 
@@ -175,10 +142,10 @@
 
             /* ======= Estilização dos Cards */
             .section-card {
-                width: 380px;
+                width: calc(100% / 3);
                 height: 500px;
                 box-shadow: var(--basic-text-shadow);
-                transition: var(--std-transition);
+                transition: transform var(--std-transition);
                 cursor: url(../../utils/cat-pointer.cur), pointer;
             }
 
@@ -186,13 +153,14 @@
 
                 .section-card img {
                     display: block;
-                    width: 380px;
-                    height: 380px;
+                    height: 75%;
+                    width: 100%;
                     object-fit: cover;
                 }
 
                 .card-text {
                     width: 100%;
+                    height: 25%;
                     border: 4px solid #F1D05C;
                     text-align: center;
                     padding: 1rem 1.5rem;
@@ -206,7 +174,6 @@
                     }
 
                     .card-text .divider-horizontal {
-                        width: 260px;
                         margin: 2px auto 10px;
                         border-color: #F1D05C;
                     }
@@ -217,6 +184,70 @@
                         font-size: 24px;
                         margin: 0;
                     }
+
+@media screen and (max-width: 1300px) {
+    .section-card { height: 440px; }
+    .card-text { padding: 1rem; }
+
+    .card-text .section-header { font-size: 24px; }
+    .card-text .section-about  { font-size: 20px; }
+}
+
+/* ======================= Responsividade da Página */
+@media screen and (max-width: 1200px) { #fourth-section .section-container { padding: 0 2rem; } }
+@media screen and (max-width: 1000px) {
+    #first-section .flex.content-container,
+    #second-section .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #first-section .content-col,
+    #second-section .content-col {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .content-col { margin-bottom: 2rem; width: 80% !important; }
+    .content-col .divider-horizontal { margin: 15px auto 35px; }
+
+    #first-section .image-col { height: 350px; }
+    .buttons { justify-content: center; }
+
+    #second-section .btnr { margin: 0 auto; }
+
+    #second-section .image-col {
+        max-width: 400px !important;
+        height: 500px !important;
+    }
+
+    #third-section .grid-item { margin: 6px; }
+
+    #fourth-section { padding-top: 80px; }
+    #carousel-fourth-section .carousel-container { flex-direction: column; }
+    #carousel-fourth-section .carousel-control-prev,
+    #carousel-fourth-section .carousel-control-next { width: 30%; }
+
+    #carousel-fourth-section .section-card { width: 50%; }
+}
+
+@media screen and (max-width: 760px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #carousel-fourth-section .carousel-control-prev,
+    #carousel-fourth-section .carousel-control-next { width: 20%; }
+    #carousel-fourth-section .section-card { width: 70%; }
+}
+
+@media screen and (max-width: 450px) {
+    #carousel-fourth-section .section-card { width: 90%; }
+    #carousel-fourth-section .carousel-control-prev { left: -15%; }
+    #carousel-fourth-section .carousel-control-next { right: -15%; }
+}
 
 /* ======================= Modal Styling */
 .modal-dialog { max-width: 500px; }

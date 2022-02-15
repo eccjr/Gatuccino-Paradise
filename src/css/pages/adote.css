@@ -2,7 +2,7 @@
 @import url(../global.css);
 
 /* ========= First Section */
-#content.section-frame  { padding: 120px 0; }
+#content.section-frame  { padding: 120px 0 80px; }
 #content .section-container,
 #content .slideshow-container,
 #content .slideshow-item {
