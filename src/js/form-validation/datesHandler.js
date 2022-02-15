@@ -2,11 +2,8 @@
     Reservation Validation
 ========================================================== */
 
-const reservationDate = document.getElementById("ipt-date"); // Reservation Date Input
-const reservationTime = { // Reservation Time Input
-    hours: document.getElementById("ipt-hours"),
-    minutes: document.getElementById("ipt-minutes"),
-}
+// Reservation Date Input
+const reservationDate = document.getElementById("ipt-date");
 
 /* Gets minDate and maxDate for Reservation Date */
 var now = new Date();
@@ -15,27 +12,35 @@ var maxDate = new Date(now.setDate(now.getDate() + 30)).toISOString().substring(
 reservationDate.setAttribute("min", minDate);
 reservationDate.setAttribute("max", maxDate);
 
-/* Gets minTime for Reservation Time */
-var minHours = now.getHours();
-var minMinutes = now.getMinutes(); minMinutes += 35 - (minMinutes % 5);
+var hasTime = ( typeof(document.getElementById("ipt-hours")) == 'undefined'
+             || document.getElementById("ipt-hours") == null ) ? false : true;
 
-if(minMinutes > 55) minHours += 1;
-reservationTime.hours.setAttribute("min", (minHours < 8 || minHours > 18) ? 8 : minHours);
-reservationTime.hours.setAttribute("value", (minHours < 8 || minHours > 18) ? 8 : minHours);
+if(hasTime) {
+    const reservationTime = { // Reservation Time Input
+        hours: document.getElementById("ipt-hours"),
+        minutes: document.getElementById("ipt-minutes"),
+    }
+    
+    /* Gets minTime for Reservation Time */
+    var minHours = now.getHours();
+    var minMinutes = now.getMinutes(); minMinutes += 35 - (minMinutes % 5);
 
-if(minHours < 8 || minHours > 18) minMinutes = 0;
-reservationTime.minutes.setAttribute("min", (minMinutes > 55) ? 0 : minMinutes);
-reservationTime.minutes.setAttribute("value", (minMinutes > 55) ? 0 : minMinutes);
+    if(minMinutes > 55) minHours += 1;
+    reservationTime.hours.setAttribute("min", (minHours < 8 || minHours > 18) ? 8 : minHours);
+    reservationTime.hours.setAttribute("value", (minHours < 8 || minHours > 18) ? 8 : minHours);
 
-var weekDay = new Date(reservationDate.value).getDay();
-reservationTime.hours.setAttribute("max", (weekDay == 0 || weekDay == 6) ? 19 : 18);
+    if(minHours < 8 || minHours > 18) minMinutes = 0;
+    reservationTime.minutes.setAttribute("min", (minMinutes > 55) ? 0 : minMinutes);
+    reservationTime.minutes.setAttribute("value", (minMinutes > 55) ? 0 : minMinutes);
+}
 
 export function validateDate(e) {
     const isWednesday = e.target.parentElement.querySelector(".is-wednesday");
     let weekDay = (e.target.valueAsDate).getUTCDay();
 
-    /* Gets minTime for Reservation Time */
-    reservationTime.hours.setAttribute("max", (weekDay === 0 || weekDay === 6) ? 18 : 17);
+    if(hasTime)
+        /* Gets minTime for Reservation Time */
+        reservationTime.hours.setAttribute("max", (weekDay === 0 || weekDay === 6) ? 18 : 17);
 
     if(weekDay == 3) {
         isWednesday.classList.remove("inactive");
