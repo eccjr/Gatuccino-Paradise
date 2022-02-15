@@ -2,10 +2,10 @@
 @import url(../global.css);
 
 /* ========= First Section */
-#app.section-frame  { padding: 120px 0; }
-#app .section-container,
-#app .slideshow-container,
-#app .slideshow-item {
+#content.section-frame  { padding: 120px 0; }
+#content .section-container,
+#content .slideshow-container,
+#content .slideshow-item {
     align-items: center;
     flex-direction: column;
 }
