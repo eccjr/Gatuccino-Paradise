@@ -252,6 +252,20 @@
 /* ======================= Modal Styling */
 .modal-dialog { max-width: 500px; }
 
+.modal-header {
+    padding: 0;
+    border: none;
+}
+
+    .modal-header .close {
+        position: absolute;
+        font-size: 2rem;
+        color: black;
+        margin: 0;
+        top: 2%;
+        right: 5%;
+    }
+
 .modal-content {
     align-items: center;
     justify-content: flex-start;
