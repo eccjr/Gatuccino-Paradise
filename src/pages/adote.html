@@ -105,7 +105,7 @@
                         <p class="section-about">Paçoca é MALUCO, DOIDO. Ele vai te acordar 3h da manhã com um animal não identificado na boca. Vai sumir por 2 semanas e voltar com um amigo gambá. Vai ter dois donos sem eles nunca saberem e vai ser aviãozinho de cadeia pra aquele seu tio que sonegava imposto.</p>
                     </div>
                 </div>
-                <form id="adoption" action="">
+                <form id="adoption" action="javascript:void(0);">
                     <div class="frm-content">
                         <label for="ipt-cats">
                             <div class="lbl-caption">
@@ -167,13 +167,13 @@
                         <fieldset class="field-reservation">
                             <legend>
                                 <i class="fa-solid fa-circle-info"></i>
-                                <span class="field-header">Informações da reserva</span>
+                                <span class="field-header">Informações da retirada</span>
                             </legend>
         
                             <label for="ipt-date">
                                 <div class="lbl-caption">
                                     <i class="fa-regular fa-calendar-check"></i>
-                                    <span class="ipt-label">Data da reserva (exceto quartas-feiras)</span>
+                                    <span class="ipt-label">Data da retirada (exceto quartas-feiras)</span>
                                 </div>
                                 <input id="ipt-date" class="frm-input" type="date" required />
                                 <div class="is-invalid">Este campo é obrigatório.</div>
@@ -181,10 +181,27 @@
                             </label>
                         </fieldset>
                     </div>
-                    <button style="margin: 15px auto;" class="btnr primary-btn">Adotar!</button>
+                    <button style="margin: 15px auto;" class="btnr primary-btn" role="button" type="submit">Adotar!</button>
                 </form>
             </div>
         </section>
+
+         <!-- Animation Modal -->
+        <div id="animationModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="animationModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div id="validationComplete" class="animation-block">
+                        <div class="animation">
+                            <div class="animation-item rotating-dash"></div>
+                            <div class="animation-item back-circle"></div>
+                            <div class="animation-item flying-cat"></div>
+                        </div>
+                        <div class="animation-caption">Adoção Feita com Sucesso!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
         
         <section id="visite">
             <div class="section-container flex">

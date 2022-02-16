@@ -5,10 +5,20 @@ const username = document.getElementById("ipt-fullname");
 var testDateTime = true;
 
 function validateForm(e) {
-    if(!testRegexes() && !testDateTime) {
-        let successMsg = `Obrigado por adotar nosso gatinho, ${username.value}!`;
-		alert(successMsg);
-	} else e.preventDefault();
+    function validateForm(e) {
+        if(!testRegexes() && !testDateTime) {
+            let formModal = document.getElementById("formModal");
+            let animationModal = new bootstrap.Modal(document.getElementById("animationModal"));
+    
+            /* Resets Form */
+            document.getElementById("sign-up").reset(); 
+    
+            animationModal.show();
+            /* let successMsg = `Obrigado por realizar sua reserva, ${username.value}!`;
+            alert(successMsg); */
+        } else e.preventDefault();
+    }
+    
 }
 
 document.getElementById("ipt-date").addEventListener("input", (e) => {
