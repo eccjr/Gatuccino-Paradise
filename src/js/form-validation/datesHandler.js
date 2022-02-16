@@ -12,15 +12,16 @@ var maxDate = new Date(now.setDate(now.getDate() + 30)).toISOString().substring(
 reservationDate.setAttribute("min", minDate);
 reservationDate.setAttribute("max", maxDate);
 
-var hasTime = ( typeof(document.getElementById("ipt-hours")) == 'undefined'
-             || document.getElementById("ipt-hours") == null ) ? false : true;
+var hasTime = false;
+if(typeof(document.getElementById("ipt-hours")) != 'undefined' && document.getElementById("ipt-hours") != null)
+    hasTime = true;
 
 if(hasTime) {
     const reservationTime = { // Reservation Time Input
         hours: document.getElementById("ipt-hours"),
         minutes: document.getElementById("ipt-minutes"),
     }
-    
+
     /* Gets minTime for Reservation Time */
     var minHours = now.getHours();
     var minMinutes = now.getMinutes(); minMinutes += 35 - (minMinutes % 5);
@@ -38,9 +39,15 @@ export function validateDate(e) {
     const isWednesday = e.target.parentElement.querySelector(".is-wednesday");
     let weekDay = (e.target.valueAsDate).getUTCDay();
 
-    if(hasTime)
+    if(hasTime) {
+        const reservationTime = { // Reservation Time Input
+            hours: document.getElementById("ipt-hours"),
+            minutes: document.getElementById("ipt-minutes"),
+        }
+
         /* Gets minTime for Reservation Time */
         reservationTime.hours.setAttribute("max", (weekDay === 0 || weekDay === 6) ? 18 : 17);
+    }
 
     if(weekDay == 3) {
         isWednesday.classList.remove("inactive");

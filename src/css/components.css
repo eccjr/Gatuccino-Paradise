@@ -246,19 +246,15 @@
 }
 
 /* Reservation Animation */
+#animationModal .modal-content { background-color: #140028; }
 .animation-block {
-    position: absolute;
-    width: 100%;
     max-width: 400px;
+    width: 100%;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    inset: 0;
-    margin: 30% auto;
-    opacity: 0;
-    max-height: 0;
 
     transition:
         opacity .2s ease-in-out,
@@ -296,7 +292,7 @@
             border: 16px green solid;
             border-top-color: transparent;
             border-right-color: transparent;
-            /* animation: rotatingDash 1s ease-in 0s 1 reverse; */
+            animation: rotatingDash 1s ease-in .2s 1 reverse;
         }
 
             .rotating-dash::before,
@@ -333,7 +329,7 @@
             height: 150px;
             background-color: greenyellow;
             border-radius: 50%;
-            /* animation: backCircle 1s ease-out 25ms 1 normal forwards; */
+            animation: backCircle 1s ease-out 45ms 1 normal forwards;
         }
 
         .flying-cat {
@@ -344,7 +340,7 @@
             background: url(../images/cat-head.png);
             background-size: cover;
             background-repeat: no-repeat;
-            /* animation: flyingCat 1s ease-out 50ms 1 normal forwards; */
+            animation: flyingCat 1s ease-out 70ms 1 normal forwards;
         }
 
         /* User Keyframes */
