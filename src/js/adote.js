@@ -5,19 +5,16 @@ const username = document.getElementById("ipt-fullname");
 var testDateTime = true;
 
 function validateForm(e) {
-    function validateForm(e) {
-        if(!testRegexes() && !testDateTime) {
-            let formModal = document.getElementById("formModal");
-            let animationModal = new bootstrap.Modal(document.getElementById("animationModal"));
-    
-            /* Resets Form */
-            document.getElementById("sign-up").reset(); 
-    
-            animationModal.show();
-            /* let successMsg = `Obrigado por realizar sua reserva, ${username.value}!`;
-            alert(successMsg); */
-        } else e.preventDefault();
-    }
+    if(!testRegexes() && !testDateTime) {
+        let animationModal = new bootstrap.Modal(document.getElementById("animationModal"));
+
+        /* Resets Form */
+        document.getElementById("adoption").reset(); 
+
+        animationModal.show();
+        /* let successMsg = `Obrigado por realizar sua reserva, ${username.value}!`;
+        alert(successMsg); */
+    } else e.preventDefault();
     
 }
 
