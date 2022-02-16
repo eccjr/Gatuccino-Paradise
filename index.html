@@ -28,7 +28,7 @@
     <title>Gatuccino Paradise - Um café relaxante com gatos!</title>
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <div class="navbar_container flex">
             <!-- Primeira Seção: Porção da Logo -->
             <a href="index.html" class="nav_section navbar_brand flex meows-font brand-name" role="link">
@@ -50,7 +50,7 @@
                             <a href="src/pages/galeria.html" role="link" class="nav_link">Fotos</a>
                         </li>
                         <li class="nav_item">
-                            <a href="#visite" role="link" class="nav_link">Visitas</a>
+                            <a id="js-visite" href="#visite" role="link" class="nav_link">Visitas</a>
                         </li>
                     </ul>
                 </div>
@@ -95,7 +95,7 @@
                         
                         <!-- Botões da Seção -->
                         <div class="buttons flex">
-                            <a data-bs-toggle="modal" data-bs-target="#form-modal" class="btnr primary-btn" role="button" tabindex="0">Faça hoje sua reserva</a>
+                            <a data-bs-toggle="modal" data-bs-target="#formModal" class="btnr primary-btn" role="button" tabindex="0">Faça hoje sua reserva</a>
                             <a href="#0" class="btnr secondary-btn" role="button" tabindex="0">Receba em casa</a>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                         
                         <!-- Botões da Seção -->
                         <div class="buttons">
-                            <a data-bs-toggle="modal" data-bs-target="#form-modal" class="btnr primary-btn" role="button" tabindex="0">Traga seu gato</a>
+                            <a data-bs-toggle="modal" data-bs-target="#formModal" class="btnr primary-btn" role="button" tabindex="0">Traga seu gato</a>
                         </div>
                     </div>
                     
@@ -371,18 +371,18 @@
     </div>
     
     <!-- Form Modal -->
-    <div id="form-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="form-modalLabel" aria-hidden="true">
+    <div id="formModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="section-caption" id="form-modalLabel">Reserva</h2>
+                    <h2 class="section-caption" id="formModalLabel">Reserva</h2>
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="divider-horizontal"></div>
                 <div class="modal-body">
-                    <form id="sign-up" action="">
+                    <form id="sign-up" action="javascript:void(0);">
                         <div class="frm-content">
                             <fieldset class="field-personal-info">
                                 <legend>
@@ -395,8 +395,8 @@
                                         <i class="fa-solid fa-user"></i>
                                         <span class="ipt-label">Nome completo</span>
                                     </div>
-                                    <input id="ipt-fullname" class="frm-input" type="text" pattern="[^0-9]*" placeholder="Ex.: Deigo lps" required />
-                                    <div class="is-invalid">Insira um nome válido (Sem nenhum número).</div>
+                                    <input id="ipt-fullname" class="frm-input" type="text" pattern="[^0-9]*" placeholder="Ex.: Deigo Lopes" required />
+                                    <div class="is-invalid">Insira um nome válido (sem números).</div>
                                     <div class="validation-icons">
                                         <i class="fa-solid fa-check"></i>
                                         <i class="fa-solid fa-xmark"></i>
@@ -431,7 +431,7 @@
                             <fieldset class="field-reservation">
                                 <legend>
                                     <i class="fa-solid fa-circle-info"></i>
-                                    <span class="field-header">Informaçôes da reserva</span>
+                                    <span class="field-header">Informações da reserva</span>
                                 </legend>
             
                                 <label for="ipt-date">
@@ -485,16 +485,23 @@
                 </div>
             </div>
         </div>
-        <div id="validationComplete" class="animation-block">
-            <div class="animation">
-                <div class="animation-item rotating-dash"></div>
-                <div class="animation-item back-circle"></div>
-                <div class="animation-item flying-cat"></div>
+    </div>
+
+    <!-- Animation Modal -->
+    <div id="animationModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="animationModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div id="validationComplete" class="animation-block">
+                    <div class="animation">
+                        <div class="animation-item rotating-dash"></div>
+                        <div class="animation-item back-circle"></div>
+                        <div class="animation-item flying-cat"></div>
+                    </div>
+                    <div class="animation-caption">Reserva Feita com Sucesso!</div>
+                </div>
             </div>
-            <div class="animation-caption">Reserva Feita com Sucesso!</div>
         </div>
     </div>
-    
     
     <!-- Project Scripts -->
     <script src="src/js/form-validation/vanilla-masker.min.js"></script>

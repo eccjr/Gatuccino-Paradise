@@ -28,7 +28,7 @@
     <title>Adote - Gatuccino Paradise</title>
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <div class="navbar_container flex">
             <!-- Primeira Seção: Porção da Logo -->
             <a href="../../index.html" class="nav_section navbar_brand flex" role="link">
@@ -50,7 +50,7 @@
                             <a href="galeria.html" role="link" class="nav_link">Fotos</a>
                         </li>
                         <li class="nav_item">
-                            <a href="#visite" role="link" class="nav_link">Visitas</a>
+                            <a id="js-visite" href="#visite" role="link" class="nav_link">Visitas</a>
                         </li>
                     </ul>
                 </div>
@@ -132,7 +132,7 @@
                                     <span class="ipt-label">Nome completo</span>
                                 </div>
                                 <input id="ipt-fullname" class="frm-input" type="text" pattern="[^0-9]*" placeholder="Ex.: Thales Rosa" required />
-                                <div class="is-invalid">Insira um nome válido (Sem nenhum número).</div>
+                                <div class="is-invalid">Insira um nome válido (sem números).</div>
                                 <div class="validation-icons">
                                     <i class="fa-solid fa-check"></i>
                                     <i class="fa-solid fa-xmark"></i>
@@ -167,7 +167,7 @@
                         <fieldset class="field-reservation">
                             <legend>
                                 <i class="fa-solid fa-circle-info"></i>
-                                <span class="field-header">Informaçôes da reserva</span>
+                                <span class="field-header">Informações da reserva</span>
                             </legend>
         
                             <label for="ipt-date">

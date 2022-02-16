@@ -44,9 +44,10 @@ const mobileNavbar = new MobileNavbar(
     ".nav_item, .nav_tel",
 );
 
-let clickedOutside = content.addEventListener("click", function(evt) {
+let clickedOutside = document.body.addEventListener("click", function(evt) {
     let elem = evt.target.offsetParent;
-    if(content.classList.contains("active") && elem.id === "content")
+    console.log(evt.target)
+    if(content.classList.contains("active") && elem.id !== "navbar")
         mobileNavbar.handleClick();
 });
 
