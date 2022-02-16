@@ -2,6 +2,7 @@
 @font-face {
     font-family: "Meows";
     src: url("../utils/Meows-VGWjy.ttf");
+    font-display: swap;
 }
 
 * { /* Atualizando valores globais */
