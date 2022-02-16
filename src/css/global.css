@@ -56,6 +56,7 @@ body {
 
 /* ========================= Navbar */
 nav {
+    position: relative;
     width: 100%;
     background: var(--bege-claro);
 }
@@ -86,7 +87,6 @@ nav {
         height: 80px;
         font-size: 26px;
         font-weight: bold;
-        margin-right: 3.5rem;
         transition: transform .2s ease-in-out;
     }
 
@@ -209,6 +209,7 @@ nav {
         z-index: 100;
     }
     
+    .navbar_brand { margin-right: 3.5rem; }
     .nav_list.active { transform: translateX(0); }
 
         .nav_item, .nav_tel { opacity: 0; }
