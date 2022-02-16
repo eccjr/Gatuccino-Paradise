@@ -6,9 +6,16 @@ var testDateTime = true;
 
 function validateForm(e) {
     if(!testRegexes() && !testDateTime) {
-        let successMsg = `Obrigado por adotar nosso gatinho, ${username.value}!`;
-		alert(successMsg);
-	} else e.preventDefault();
+        let animationModal = new bootstrap.Modal(document.getElementById("animationModal"));
+
+        /* Resets Form */
+        document.getElementById("adoption").reset(); 
+
+        animationModal.show();
+        /* let successMsg = `Obrigado por realizar sua reserva, ${username.value}!`;
+        alert(successMsg); */
+    } else e.preventDefault();
+    
 }
 
 document.getElementById("ipt-date").addEventListener("input", (e) => {
