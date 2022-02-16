@@ -116,6 +116,7 @@
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 0.8rem;
+            text-transform: capitalize;
         }
 
             fieldset legend i { font-size: .8rem; vertical-align: middle; }
@@ -129,6 +130,10 @@
             flex-direction: column;
             margin-left: .5rem;
             font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--dark-text-color);
+            margin-bottom: 15px;
             gap: .3rem;
         }
 
@@ -198,6 +203,8 @@
             justify-content: flex-start;
             gap: .25rem;
         }
+
+            .time-block .frm-input { text-align: right; }
 
             .time-block .frm-input::-webkit-outer-spin-button,
             .time-block .frm-input::-webkit-inner-spin-button {
