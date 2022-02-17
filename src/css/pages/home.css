@@ -74,6 +74,7 @@
         overflow: hidden;
         margin: 10px;
         box-shadow: var(--basic-box-shadow);
+        transition: transform var(--std-transition);
         cursor: url(../../utils/cat-pointer.cur), pointer;
     }
     
@@ -100,7 +101,8 @@
             transform: translateY(100%);
         }
 
-    .grid-item:hover .hidden-caption { transform: translateY(0); }
+    @media screen and (min-width: 530px) { .grid-item:hover .hidden-caption { transform: translateY(0); } }
+    @media screen and (max-width: 530px) { .grid-item:hover { transform: scale(1.05); } }
     
     .grid-item-01 {
         grid-row-start: 1;
@@ -254,6 +256,8 @@
         align-items: center;
         gap: 20px;
     }
+
+    .grid-item .hidden-caption { font-size: 1rem; }
 
     #carousel-fourth-section .carousel-control-prev,
     #carousel-fourth-section .carousel-control-next { width: 20%; }
