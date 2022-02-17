@@ -87,6 +87,7 @@ nav {
         height: 80px;
         font-size: 26px;
         font-weight: bold;
+        text-decoration: none;
         transition: transform .2s ease-in-out;
     }
 
@@ -209,7 +210,7 @@ nav {
         z-index: 100;
     }
     
-    .navbar_brand { margin-right: 3.5rem; }
+    nav .navbar_brand { margin-right: 3.5rem; }
     .nav_list.active { transform: translateX(0); }
 
         .nav_item, .nav_tel { opacity: 0; }
@@ -241,17 +242,17 @@ nav {
 @media screen and (max-width: 480px) {
     .navbar_container { --height-nav-desktop: 80px; }
         
-        .navbar_brand {
+        nav .navbar_brand {
             font-size: 22px;
             height: 60px;
         }
 
-            .navbar_brand img {
+            nav .navbar_brand img {
                 width: 60px;
                 height: 60px;
             }
 
-            .navbar_brand .brand-name {
+            nav .navbar_brand .brand-name {
                 margin-top: 6px;
                 line-height: 28px;
             }
@@ -279,7 +280,7 @@ nav {
         bottom: 0;
         right: 2%;
         width: 520px;
-        height: 240px;
+        height: 200px;
         background: url(../images/pop-cat.png);
         background-size: cover;
     }
@@ -290,6 +291,8 @@ nav {
         margin-top: 60px;
         text-align: left;
     }
+
+    .visite-col .navbar_brand { margin-bottom: 1rem; }
 
         .col-text.redes-sociais { margin-top: 25px; }
         .col-text {
@@ -401,6 +404,10 @@ footer {
         .visite-col .col-content {
             text-align: center;
             margin-top: 30px;
+        }
+
+        .visite-col .navbar_brand {
+            margin: 0 auto 1rem;
         }
 
         .footer-social-media { justify-content: center; }

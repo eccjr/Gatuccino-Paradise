@@ -1,31 +1,32 @@
 {
     "name": "Gatuccino Paradise",
     "short_name": "Gatuccino Paradise",
-    "start_url": ".",
+    "start_url": "../",
+    "scope": ".",
     "description": "Conheça a cafeteria mais amada do Brasil! Aproveite seu dia em um local aconchegante junto a nossos gatinhos incríveis e bebidas de tirar o fôlego.",
     "icons": [
         {
-            "src": "/public/favicons/favicon-16x16.png",
+            "src": "./favicons/favicon-16x16.png",
             "sizes": "16x16",
             "type": "image/png"
         },
         {
-            "src": "/public/favicons/favicon-32x32.png",
+            "src": "./favicons/favicon-32x32.png",
             "sizes": "32x32",
             "type": "image/png"
         },
         {
-            "src": "/public/favicons/apple-touch-icon-180x180.png",
+            "src": "./favicons/apple-touch-icon-180x180.png",
             "sizes": "180x180",
             "type": "image/png"
         },
         {
-            "src": "/public/favicons/apple-touch-icon-57x57.png",
+            "src": "./favicons/apple-touch-icon-57x57.png",
             "sizes": "57x57",
             "type": "image/png"
         },
         {
-            "src": "/public/favicons/favicon.ico",
+            "src": "./favicons/favicon.ico",
             "sizes": "48x48",
             "type": "image/png"
         }
