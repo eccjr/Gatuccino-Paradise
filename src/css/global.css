@@ -268,10 +268,21 @@ nav {
 
 /* ========================= Footer: Seção Visite */
 #visite {
+    position: relative;
     padding: 120px 0;
     background: var(--marrom-escuro);
     color: var(--light-text-color);
 }
+
+    #visite .curious-cats {
+        position: absolute;
+        bottom: 0;
+        right: 2%;
+        width: 520px;
+        height: 150px;
+        background: url(../images/curious-cats-nobg.png);
+        background-size: cover;
+    }
 
     #visite .divider-vertical { align-self: center; }
 
@@ -368,6 +379,11 @@ footer {
 
 /* ============ Responsividade da Seção Visite */
 @media screen and (max-width: 1200px) {
+    #visite .curious-cats {
+        width: 300px;
+        height: 85px;
+    }
+
     #visite .section-container {
         flex-direction: column;
         justify-content: flex-start;
