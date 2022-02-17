@@ -279,8 +279,8 @@ nav {
         bottom: 0;
         right: 2%;
         width: 520px;
-        height: 150px;
-        background: url(../images/curious-cats-nobg.png);
+        height: 240px;
+        background: url(../images/pop-cat.png);
         background-size: cover;
     }
 
@@ -381,7 +381,7 @@ footer {
 @media screen and (max-width: 1200px) {
     #visite .curious-cats {
         width: 300px;
-        height: 85px;
+        height: 120px;
     }
 
     #visite .section-container {
