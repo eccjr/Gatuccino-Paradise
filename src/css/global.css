@@ -1,5 +1,60 @@
-@import url(root-preset.css);
-@import url(components.css);
+:root {
+    /* Variáveis de Cores utilizadas */
+    --marrom-cafe: #7D3F20;
+    --marrom-escuro: #481D01;
+    --bege-claro: #F4EBD0;
+    --bege-escuro: #D6AD60;
+    --cinza-claro: #EBEDFC;
+    --cinza-medio: #C7C7C7;
+    --cinza-escuro: #979797;
+
+    /* Tamanhos Variáveis */
+    --width-container-desktop: 1110px;
+    --height-nav-desktop: 100px;
+    font-size: 16px;
+
+    /* Utilidades */
+    --light-text-color: var(--cinza-claro);
+    --dark-text-color: var(--marrom-cafe);
+    --basic-text-shadow: 0 4px 8px rgba(0, 0, 0, .16);
+    --basic-box-shadow: 4px 2px 6px rgba(0, 0, 0, .16);
+    --std-transition: .4s ease;
+    --std-border:
+        var(--marrom-cafe) 0%,
+        rgba(255, 255, 255, .9) 45%,
+        rgba(255, 255, 255, .9) 65%,
+        var(--marrom-escuro) 100%;
+}
+
+/* Meows Font Import */
+@font-face {
+    font-family: "Meows";
+    src: url("../utils/Meows-VGWjy.ttf");
+    font-display: swap;
+}
+
+* { /* Atualizando valores globais */
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Rokkitt", Arial, sans-serif;
+}
+
+/* Font-Meows Class */
+.meows-font { font-family: "Meows"; }
+
+/* ----> Overwriting BS a:hover */
+a:hover { color: inherit; }
+
+/* Pointer Custom Cursor */
+a,
+button,
+[role="button"],
+select,
+label,
+input { cursor: url("../utils/cat-pointer.cur"), pointer !important; }
+
 
 /* ========================= Elementos de Controle da Página */
 /* ----> Text Selection Color */
@@ -53,6 +108,380 @@ body {
     /* ----> Mobile Menu Effect */
     #content.active section,
     #content.active footer { opacity: .5; }
+
+/* ========================= Utilidades */
+/* =========== Section Presets */
+.section-container {
+    max-width: var(--width-container-desktop);
+    background: inherit;
+    margin: 0 auto;
+    text-shadow: var(--basic-text-shadow);
+}
+
+.section-frame {
+    width: 100%;
+    padding-top: 120px;
+    background: var(--bege-claro);
+}
+
+.section-header {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--bege-escuro);
+    margin-bottom: 15px;
+}
+
+.section-caption {
+    font-size: 72px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--dark-text-color);
+}
+
+.section-about {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--dark-text-color);
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    .section-header { font-size: 1.5rem; }
+    .section-caption { font-size: 3rem; }
+
+    .section-header,
+    .section-caption,
+    .section-about { text-align: center; }
+}
+
+@media screen and (max-width: 550px) { .section-caption { line-height: 1.2; } }
+
+/* =========== Flex Classes */
+.flex, .flex-reverse {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.flex-reverse { flex-direction: row-reverse; }
+
+/* =========== Estilização dos Botões */
+.btnr, .primary-btn, .secondary-btn {
+    display: block;
+    width: 250px;
+    height: 70px;
+    padding: 17px 15px;
+    font-size: 24px;
+    border-radius: 4px;
+    text-align: center;
+    transition: all .2s ease-in;
+}
+
+.primary-btn {
+    background: var(--marrom-cafe);
+    color: var(--cinza-claro);
+    text-decoration: none;
+}
+
+.secondary-btn {
+    background: inherit;
+    text-decoration: underline;
+    color: var(--marrom-cafe);
+}
+
+/* Hover-Animation */
+.primary-btn:hover { color: var(--cinza-claro); }
+.secondary-btn:hover { color: var(--marrom-cafe); }
+.btnr:hover {
+    opacity: .8;
+    transform: translateY(-6px);
+}
+
+/* =========== Form Components */
+.modal-content .divider-horizontal {
+    width: 60%;
+}
+
+.frm-content {
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+    .frm-content fieldset {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+        fieldset legend {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            text-transform: capitalize;
+        }
+
+            fieldset legend i { font-size: .8rem; vertical-align: middle; }
+
+        .frm-content fieldset label {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: .5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--dark-text-color);
+            margin-bottom: 15px;
+            gap: .3rem;
+        }
+
+            .frm-content label .frm-input {
+                width: calc(100% - 0.5rem);
+                padding: .4rem .6rem;
+                border-radius: .3rem;
+                font-size: 1rem;
+                transition: all .35s;
+            }
+
+            .frm-input:valid { border: 1px solid #48D97A; }
+            .frm-input:invalid { border: 1px solid tomato; }
+            .frm-input:focus {
+                outline: none;
+                border: 1px solid #140028;
+            }
+
+            /* ========== Validation Label */
+            .is-invalid, .is-wednesday {
+                max-height: 1rem;
+                font-size: .8rem;
+                color: tomato;
+                text-shadow: 0 0 8px rgba(0, 0, 0, .4);
+                font-weight: bold;
+                transition: all .35s;
+                opacity: 1;
+            }
+
+            .frm-input:valid ~ .is-invalid,
+            .is-wednesday.inactive {
+                max-height: 0;
+                opacity: 0;
+            }
+
+            /* ========== Validation Icons */
+            .validation-icons i {
+                position: absolute;
+                top: 2.35rem;
+                right: 1rem;
+                opacity: 0;
+                transition: all .35s;
+            }
+
+                .frm-input:valid ~ .validation-icons .fa-check {
+                    opacity: 1;
+                    color: #48D97A;
+                }
+
+                .frm-input:invalid ~ .validation-icons .fa-xmark {
+                    opacity: 1;
+                    color: tomato;
+                }
+
+        label[for="ipt-hours"] .inputs-block {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 1rem;
+        }
+
+        .inputs-block .time-block {
+            max-width: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: .25rem;
+        }
+
+            .time-block .frm-input { text-align: right; }
+
+            .time-block .frm-input::-webkit-outer-spin-button,
+            .time-block .frm-input::-webkit-inner-spin-button {
+                /* display: none; <- Crashes Chrome on hover */
+                -webkit-appearance: none;
+                margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+            }
+
+            .time-block .frm-input[type=number] {
+                -moz-appearance:textfield; /* Firefox */
+            }
+
+        .frm-btn {
+            align-self: center;
+            transition:
+                opacity var(--std-transition),
+                box-shadow var(--std-transition),
+                transform var(--std-transition)
+            ;
+        }
+
+        .frm-btn:hover {
+            opacity: .9;
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, .4);
+            transform: translateY(-4px);
+        }
+
+/* =========== Divisores */
+.divider-horizontal {
+    width: 40%;
+    border-top: 2px solid var(--bege-escuro);
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.divider-vertical {
+    height: 300px;
+    border-left: 2px solid var(--bege-escuro);
+}
+
+/* =========== Utilidades */
+/* Border-Hack */
+.border-wrapper {
+    background: linear-gradient(145deg, var(--std-border));
+    padding: 6px;
+}
+
+/* Reservation Animation */
+#animationModal .modal-content { background-color: #140028; }
+.animation-block {
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    transition:
+        opacity .2s ease-in-out,
+        max-height .2s ease-in-out
+    ;
+}
+
+.animation-block.active {
+    max-height: none;
+    opacity: 1;
+}
+
+    .animation {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .animation-caption {
+        width: 80%;
+        font-weight: bold;
+        font-size: 1.8rem;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 4px 6px rgba(0,0,0,.8);
+        margin-top: 1.5rem;
+    }
+
+        .rotating-dash {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 16px green solid;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            animation: rotatingDash 1s ease-in .2s 1 reverse;
+        }
+
+            .rotating-dash::before,
+            .rotating-dash::after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: green;
+                border-radius: 50%;
+            }
+
+            .rotating-dash::before {
+                bottom: 0;
+                right: 12px;
+                box-shadow: 
+                    0 0 0 12px #acff2f99,
+                    0 0 0 24px #acff2f66,
+                    0 0 0 36px #acff2f33,
+                    0 0 50px #acff2f
+                ;
+            }
+
+            .rotating-dash::after {
+                width: 20px;
+                height: 20px;
+                top: 8px;
+                left: 12px;
+            }
+
+        .back-circle {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: greenyellow;
+            border-radius: 50%;
+            animation: backCircle 1s ease-out 45ms 1 normal forwards;
+        }
+
+        .flying-cat {
+            position: absolute;
+            top: 25px;
+            width: 125px;
+            height: 125px;
+            background: url(../images/cat-head.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: flyingCat 1s ease-out 70ms 1 normal forwards;
+        }
+
+        /* User Keyframes */
+        @keyframes rotatingDash {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes backCircle {
+            from { transform: scale(0.5); }
+            to { transform: scale(1); }
+        }
+
+        @keyframes flyingCat {
+            from {
+                opacity: 0;
+                transform: rotate(-540deg) scale(0);
+            }
+            
+            to {
+                opacity: 1;
+                transform: rotate(0) scale(1);
+            }
+        }
 
 /* ========================= Navbar */
 nav {
