@@ -1,6 +1,3 @@
-@import url(../reset.css);
-@import url(../global.css);
-
 /* ========================= Primeira Seção: Sobre o Café */
 /* Coluna de Texto - Conteúdo */
 #first-section .content-col {
@@ -70,6 +67,8 @@
 }
 
     .grid-item {
+        position: relative;
+        overflow: hidden;
         margin: 10px;
         box-shadow: var(--basic-box-shadow);
         transition: transform var(--std-transition);
@@ -83,7 +82,24 @@
             overflow: hidden;
         }
     
-    .grid-item:hover { transform: scale(1.05); }
+        .grid-item .hidden-caption {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: #D6AD60AA;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark-text-color);
+            transition: all var(--std-transition);
+            transform: translateY(100%);
+        }
+
+    @media screen and (min-width: 530px) { .grid-item:hover .hidden-caption { transform: translateY(0); } }
+    @media screen and (max-width: 530px) { .grid-item:hover { transform: scale(1.05); } }
     
     .grid-item-01 {
         grid-row-start: 1;
@@ -237,6 +253,8 @@
         align-items: center;
         gap: 20px;
     }
+
+    .grid-item .hidden-caption { font-size: 1rem; }
 
     #carousel-fourth-section .carousel-control-prev,
     #carousel-fourth-section .carousel-control-next { width: 20%; }

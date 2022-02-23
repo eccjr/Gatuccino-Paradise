@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Conheça a cafeteria mais amada do Brasil! Aproveite seu dia em um local aconchegante junto a nossos gatinhos incríveis e bebidas de tirar o fôlego.">
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Conheça a cafeteria mais amada do Brasil! Aproveite seu dia em um local aconchegante junto a nossos gatinhos incríveis e bebidas de tirar o fôlego." />
+    <link rel="manifest" href="public/site.webmanifest" />
     
     <!-- Favicons -->
     <link rel="shortcut icon" href="public/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="public/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="public/favicons/apple-touch-icon-57x57.png">
     <link rel="icon" type="image/png" sizes="32x32" href="public/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="public/favicons/favicon-16x16.png">
     <link rel="mask-icon" href="public/favicons/safari-pinned-tab.svg" color="#5bbad5">
     
-    <!-- Bootstrap Import -->
-    <link rel="stylesheet" href="src/css/bootstrap/bootstrap.useful.css">
-    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Import -->
+    <link rel="stylesheet" href="src/css/bootstrap/bootstrap.useful.css">
     
     <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src/css/pages/home.css">
     
     <title>Gatuccino Paradise - Um café relaxante com gatos!</title>
@@ -177,15 +180,35 @@
                 <div class="image-grid">
                     <div class="grid-item grid-item-01">
                         <img class="border-wrapper" src="src/images/products/coffee-01.png" alt="Foto 01 de alguns de nossos deliciosos produtos.">
+                        <div class="hidden-caption">
+                            <i class="fa-solid fa-mug-saucer"></i>
+                            <span class="product-name">Perfect Macchiato</span>
+                            <span class="product-price">R$5,00</span>
+                        </div>
                     </div>
                     <div class="grid-item grid-item-02">
                         <img class="border-wrapper" src="src/images/products/coffee-02.png" alt="Foto 02 de alguns de nossos deliciosos produtos.">
+                        <div class="hidden-caption">
+                            <i class="fa-solid fa-cookie-bite"></i>
+                            <span class="product-name">Oreo Break</span>
+                            <span class="product-price">R$3,50</span>
+                        </div>
                     </div>
                     <div class="grid-item grid-item-03">
                         <img class="border-wrapper" src="src/images/products/coffee-03.png" alt="Foto 03 de alguns de nossos deliciosos produtos.">
+                        <div class="hidden-caption">
+                            <i class="fa-solid fa-cake"></i>
+                            <span class="product-name">King's Cake</span>
+                            <span class="product-price">R$6,00</span>
+                        </div>
                     </div>
                     <div class="grid-item grid-item-04">
                         <img class="border-wrapper" src="src/images/products/coffee-04.png" alt="Foto 04 de alguns de nossos deliciosos produtos.">
+                        <div class="hidden-caption">
+                            <i class="fa-solid fa-mug-saucer"></i>
+                            <span class="product-name">Kittuccino Paw</span>
+                            <span class="product-price">R$5,00</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -336,6 +359,10 @@
                 <div class="visite-col">
                     <h2 class="section-header">Contate-nos</h2>
                     <div class="col-content">
+                        <a href="index.html" class="nav_section navbar_brand flex meows-font brand-name" role="link">
+                            <img src="public/logo.png" alt="Logomarca da Cafeteria Gatuccino Paradise." />
+                            <span class="meows-font brand-name">Gatuccino Paradise</span>
+                        </a>
                         <a class="col-text" href="#0"><strong>Telefone:</strong> +55 (17) 4002-8922</a>
                         <a class="col-text" href="#0"><strong>E-mail:</strong> faleconosco@gatoverde.com</a>
                         <p class="col-text redes-sociais"><strong>Nossas Redes Sociais</strong></p>
@@ -348,6 +375,7 @@
                     </div>
                 </div>
             </div>
+            <div class="curious-cats"></div>
         </section>
     </main>
     
